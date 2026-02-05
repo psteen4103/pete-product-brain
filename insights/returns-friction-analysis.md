@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-Our returns experience generates significant negative sentiment despite a technically generous policy. Key friction points around label generation, refund timing, and exchange complexity drive 34% of our negative CSAT scores. This analysis benchmarks against competitors (notably REI's legendary policy) and quantifies the CLV impact of returns handling.
+Our returns experience generates significant negative sentiment despite a technically generous policy. Key friction points around label generation, refund timing, and exchange complexity drive 34% of our negative CSAT scores. This analysis benchmarks against competitors (notably Summit Co-op's legendary policy) and quantifies the CLV impact of returns handling.
 
 ## Returns Volume Overview
 
@@ -49,7 +49,7 @@ Current process requires customers to:
 5. Print label (no email option)
 6. Package item themselves
 
-> "I don't have a printer. Why is this so complicated? Amazon sends me a QR code I can show at Whole Foods." — Support ticket #41023
+> "I don't have a printer. Why is this so complicated? PrimeGear sends me a QR code I can show at Whole Foods." — Support ticket #41023
 
 > "I started the return on my phone but it says I need to print something. I gave up and just kept the jacket I don't want." — Support ticket #41892
 
@@ -78,13 +78,13 @@ Current exchange process:
 
 > "I just wanted a medium instead of a large. Why do I have to buy the same jacket twice and wait for you to refund me?" — Support ticket #41567
 
-> "REI let me walk in, hand them the wrong size, and walk out with the right one. Why can't you do that online?" — Customer interview
+> "Summit Co-op let me walk in, hand them the wrong size, and walk out with the right one. Why can't you do that online?" — Customer interview
 
 ## Competitor Benchmarking
 
-### REI Return Policy
+### Summit Co-op Return Policy
 
-| Aspect | REI | Contoso |
+| Aspect | Summit Co-op | Contoso |
 |--------|-----|---------|
 | Return window | 1 year (members) | 60 days |
 | Label generation | Email QR code | Print only |
@@ -93,18 +93,18 @@ Current exchange process:
 | Defective items | Lifetime guarantee | 60 days |
 | Refund speed | 3-5 days | 8-13 days |
 
-> "REI's return policy is why I shop there even when you're cheaper. I know I can bring anything back if it doesn't work on the trail." — Customer interview
+> "Summit Co-op's return policy is why I shop there even when you're cheaper. I know I can bring anything back if it doesn't work on the trail." — Customer interview
 
-### Patagonia "Ironclad Guarantee"
+### Alpine Trailwear "Ironclad Guarantee"
 
 - Lifetime repair or replacement for defects
 - Worn Wear accepts returns of any condition
 - Store credit vs. refund option (higher adoption, faster)
 
-### Amazon Returns
+### PrimeGear Returns
 
 - QR code to phone (no printing)
-- Whole Foods, Kohl's, Amazon locker drop-off
+- Whole Foods, Kohl's, PrimeGear locker drop-off
 - Instant refund option (for Prime members on select items)
 - "Try before you buy" on eligible items
 
@@ -138,9 +138,9 @@ Current exchange process:
 > "The experience was so bad I disputed the charge with my credit card instead of dealing with your return process." — Support ticket #40234
 
 ### Comparison to Competitors
-> "I just returned $300 of stuff to Amazon in 45 seconds at the Whole Foods down the street. This took me an hour." — Customer interview
+> "I just returned $300 of stuff to PrimeGear in 45 seconds at the Whole Foods down the street. This took me an hour." — Customer interview
 
-> "REI treats returns like a chance to help me. You treat it like I'm stealing from you." — NPS verbatim
+> "Summit Co-op treats returns like a chance to help me. You treat it like I'm stealing from you." — NPS verbatim
 
 ### Positive Experiences (rare)
 > "When I called about the defective zipper, the agent was amazing and shipped a replacement before I even sent back the broken one. Why isn't it always like this?" — Support ticket #42891

@@ -340,7 +340,7 @@ The repo includes 24 interconnected documents that feel like a real PM's knowled
 | File | Description |
 |------|-------------|
 | [customer-feedback-q4.md](insights/customer-feedback-q4.md) | Q4 2025 feedback synthesis (n=2,847) |
-| [competitive-analysis.md](insights/competitive-analysis.md) | REI/Patagonia/Backcountry comparison |
+| [competitive-analysis.md](insights/competitive-analysis.md) | Summit Co-op/Alpine Trailwear/Ridgeline Outfitters comparison |
 | [mobile-usability-study.md](insights/mobile-usability-study.md) | 12-participant usability test findings |
 | [search-analytics-deep-dive.md](insights/search-analytics-deep-dive.md) | 2.4M search queries analyzed |
 | [sustainability-survey-2025.md](insights/sustainability-survey-2025.md) | 3,247 respondents on eco preferences |
@@ -351,15 +351,17 @@ The repo includes 24 interconnected documents that feel like a real PM's knowled
 | File | Description |
 |------|-------------|
 | [outdoor-gear-market.md](research/outdoor-gear-market.md) | $15B market overview, trends |
-| [competitor-deep-dive-rei.md](research/competitor-deep-dive-rei.md) | REI co-op model, 23M members |
-| [competitor-deep-dive-backcountry.md](research/competitor-deep-dive-backcountry.md) | Gearhead program analysis |
+| [competitor-deep-dive-summit-coop.md](research/competitor-deep-dive-summit-coop.md) | Summit Co-op co-op model, 23M members |
+| [competitor-deep-dive-ridgeline-outfitters.md](research/competitor-deep-dive-ridgeline-outfitters.md) | Gearhead program analysis |
 | [dtc-outdoor-brands.md](research/dtc-outdoor-brands.md) | Cotopaxi, Rumpl, BioLite profiles |
 | [gen-z-outdoor-trends.md](research/gen-z-outdoor-trends.md) | Gorpcore, TikTok influence |
 | [ai-in-retail-2026.md](research/ai-in-retail-2026.md) | Visual search, AI recommendations |
 
-### Roadmap (5)
+### Roadmap (7)
 | File | Description |
 |------|-------------|
+| [strategic-vision.md](roadmap/strategic-vision.md) | Mission, vision, values, strategic pillars |
+| [brand-positioning.md](roadmap/brand-positioning.md) | Competitive positioning, target customers |
 | [2026-h1.md](roadmap/2026-h1.md) | H1 plan with milestones, risks |
 | [2026-h2.md](roadmap/2026-h2.md) | H2 priorities, dependencies |
 | [prioritization-framework.md](roadmap/prioritization-framework.md) | RICE scoring, trade-off rationale |

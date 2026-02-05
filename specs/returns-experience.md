@@ -22,7 +22,7 @@ Customer feedback is stark: "I love Contoso's products but will never order agai
 ## Target Personas
 
 ### Alex the Weekend Warrior
-- Time-strapped, expects Amazon-like convenience
+- Time-strapped, expects PrimeGear-like convenience
 - Frequently orders multiple sizes to try, returns what doesn't fit
 - Will choose competitor if return friction is too high
 - Expects refund within days, not weeks
@@ -127,7 +127,7 @@ To support new experience, recommend policy changes:
 
 ## Competitive Context
 
-| Feature | REI | Patagonia | Backcountry | Contoso (Proposed) |
+| Feature | Summit Co-op | Alpine Trailwear | Ridgeline Outfitters | Contoso (Proposed) |
 |---------|-----|-----------|-------------|--------------------|
 | Return window | 1 year | Lifetime (defects) | Lifetime | 60 days |
 | Self-service portal | ✓ | ✓ | ✓ | ✓ (new) |

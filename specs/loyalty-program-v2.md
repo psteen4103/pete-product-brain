@@ -31,7 +31,7 @@ Replace points accumulation with a **tiered experiential program** that rewards 
 ### Experiential Benefits
 
 - **Gear Try-Before-Buy:** Summit members can rent new gear for 2 weeks before purchase
-- **Adventure Perks:** Partnerships with REI Experiences, AllTrails Pro, national park passes
+- **Adventure Perks:** Partnerships with Summit Co-op Experiences, AllTrails Pro, national park passes
 - **Sustainability Program:** Donate old gear for bonus rewards, carbon offset matching
 
 ### Earning Mechanics

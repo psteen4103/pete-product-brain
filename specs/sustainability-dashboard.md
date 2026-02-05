@@ -14,7 +14,7 @@ Sustainability is core to Contoso's brand promise, but customers can't see or qu
 - **68% of surveyed customers** say sustainability influences their purchase decisions
 - Only 23% of customers know Contoso offsets shipping emissions for every order
 - 40% of our catalog is eco-certified, but discovery is buried in filters
-- Competitor Patagonia's "Worn Wear" and REI's "Used Gear" programs drive significant brand loyalty (see [Competitive Analysis](/insights/competitive-analysis.md))
+- Competitor Alpine Trailwear's "Worn Wear" and Summit Co-op's "Used Gear" programs drive significant brand loyalty (see [Competitive Analysis](/insights/competitive-analysis.md))
 - Q4 feedback explicitly requested "show me my impact" features
 
 Our sustainability story is hidden. This spec proposes making it visible and personal.
@@ -116,8 +116,8 @@ Expansion of existing program with clearer value proposition:
 ## Competitive Opportunity
 
 This initiative positions Contoso between:
-- REI's practical sustainability (used gear, rental program)
-- Patagonia's activist sustainability (Worn Wear, political advocacy)
+- Summit Co-op's practical sustainability (used gear, rental program)
+- Alpine Trailwear's activist sustainability (Worn Wear, political advocacy)
 
 Our angle: **quantified, personal sustainability** — helping customers understand and share their individual impact. No competitor currently offers a personal impact dashboard with this level of detail.
 

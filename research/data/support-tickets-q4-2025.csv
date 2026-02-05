@@ -11,9 +11,9 @@ TKT-4529,2025-10-08,chat,checkout,"Trying to send a gift but the invoice shows t
 TKT-4530,2025-10-09,email,mobile,"Your app keeps crashing when I try to look at product photos. iPhone 13. Super annoying when I'm in the store comparing prices.",true,Known iOS bug - update pending
 TKT-4531,2025-10-10,chat,search,"Searched 'waterproof jacket for pacific northwest rain' and got 400+ results. I just want THE jacket people actually use for PNW hiking. Too many choices.",true,Provided personal recommendation
 TKT-4532,2025-10-11,phone,checkout,"The Apple Pay button didn't work. Just spun forever. Had to dig out my credit card which I didn't have handy.",true,Intermittent Apple Pay issue - escalated to eng
-TKT-4533,2025-10-11,email,product,"Bought the REI Kingdom tent. Do I need a separate footprint? The product page doesn't say if it comes with one or not.",true,Clarified no footprint included
+TKT-4533,2025-10-11,email,product,"Bought the Summit Co-op Kingdom tent. Do I need a separate footprint? The product page doesn't say if it comes with one or not.",true,Clarified no footprint included
 TKT-4534,2025-10-12,chat,loyalty,"How close am I to the next tier? I can't find anywhere that shows my progress. Just see I'm 'Basecamp' level.",true,Showed how to find tier progress - buried in account settings
-TKT-4535,2025-10-13,email,returns,"The Patagonia jacket I got has different colors than the photos. It's more purple than blue. Returning.",true,Processed return - color accuracy feedback
+TKT-4535,2025-10-13,email,returns,"The Alpine Trailwear jacket I got has different colors than the photos. It's more purple than blue. Returning.",true,Processed return - color accuracy feedback
 TKT-4536,2025-10-14,chat,checkout,"Checkout took FOREVER on my phone. Like 5 screens? Just let me pay already. Cart had $220 worth of stuff and I gave up.",false,Mobile checkout friction - lost sale
 TKT-4537,2025-10-15,phone,product,"I want to get my dad into backpacking but he's 67 with a bad knee. Is there like a 'senior beginner' kit or something? Lightweight and easy on joints?",true,Custom recommendations provided - great feedback
 TKT-4538,2025-10-16,email,shipping,"You shipped my items in 3 separate boxes when they could have fit in one. That's wasteful. I thought you were a sustainable company?",true,Logged packaging feedback - warehouse issue
@@ -57,7 +57,7 @@ TKT-4575,2025-11-22,chat,product,"Will this hydration bladder fit in my Deuter b
 TKT-4576,2025-11-23,phone,search,"Tried searching 'gifts for hiker under $50' and got 900 results. No help at all.",true,Sent curated guide - gift search is broken
 TKT-4577,2025-11-24,email,returns,"Product arrived damaged. Return process wants ME to pay for shipping? That's ridiculous for a defective item.",true,Prepaid label issued - policy confusion
 TKT-4578,2025-11-25,chat,mobile,"Can't use the app without allowing location. I don't want to share my location just to browse products.",true,App permission issue - should be optional
-TKT-4579,2025-11-26,phone,checkout,"Black Friday and your site crashed. Lost my cart twice. Went to REI instead.",false,Site capacity issue - lost customer
+TKT-4579,2025-11-26,phone,checkout,"Black Friday and your site crashed. Lost my cart twice. Went to Summit Co-op instead.",false,Site capacity issue - lost customer
 TKT-4580,2025-12-01,email,product,"New to hammock camping. What else do I need with the hammock? Straps? Tarp? Underquilt? Site doesn't explain the system.",true,Full hammock guide sent - onboarding gap
 TKT-4581,2025-12-02,chat,loyalty,"Do my points work at your physical stores too? Nothing explains this.",true,Clarified omnichannel redemption
 TKT-4582,2025-12-03,phone,returns,"Trade-in program page says 'coming soon' but it's been saying that for 6 months.",true,No update on trade-in timeline - customer frustrated

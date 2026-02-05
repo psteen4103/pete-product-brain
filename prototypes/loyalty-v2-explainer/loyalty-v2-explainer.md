@@ -37,7 +37,7 @@ The program is optimized for *volume* (spending), not for *engagement* (relation
 
 ### Why Now?
 
-1. **Competitive gap** — REI and Peak Design have tier-based adventure programs. We're falling behind.
+1. **Competitive gap** — Summit Co-op and Peak Design have tier-based adventure programs. We're falling behind.
 2. **Sustainability tailwind** — 40% of our catalog is eco-certified. Members want to earn for *giving*, not just taking.
 3. **Q2 window** — Checkout redesign completion frees engineering bandwidth for loyalty infrastructure changes.
 
@@ -71,7 +71,7 @@ Members aren't redeeming *points* — they're unlocking *experiences*:
 #### Tier 2: Adventure Partnerships
 - **AllTrails Pro Access** (Trailblazer+): Offline maps, pro features
 - **National Park Passes** (Summit+): Annual pass partnerships with NPS
-- **REI Adventures discounts** (Summit+): Guided experiences, expeditions
+- **Summit Co-op Adventures discounts** (Summit+): Guided experiences, expeditions
 - Not discount-code transactional — this is *access to adventures*
 
 #### Tier 3: Sustainability Program
@@ -102,7 +102,7 @@ Existing members see immediate wins:
 
 - [ ] **Members will value experiences more than generic discounts** — *Status: Validated* (Q4 feedback shows "I want to try before I buy" and "adventure access" as top unmet needs)
 - [ ] **$500/$1,500 thresholds are achievable** — *Status: Unvalidated* (need spend distribution analysis; higher risk if avg customer is <$500/year)
-- [ ] **AllTrails, NPS, REI will partner with us** — *Status: In Discussion* (preliminary conversations positive; terms TBD)
+- [ ] **AllTrails, NPS, Summit Co-op will partner with us** — *Status: In Discussion* (preliminary conversations positive; terms TBD)
 - [ ] **Concierge can be outsourced profitably** — *Status: TBD* (engineering feasibility unknown; cost model TBD)
 - [ ] **Members won't abuse referral program** — *Status: Risk* (referral fraud is a known issue; need anti-fraud strategy)
 
@@ -126,7 +126,7 @@ We're measuring engagement *quality*, not just volume:
 
 ### Questions Blocking Launch
 
-1. **Partner Finality** (Owner: Marcus) — AllTrails, NPS, REI Experiences have agreed in principle, but contracts need CFO review. Target resolution: Jan 20.
+1. **Partner Finality** (Owner: Marcus) — AllTrails, NPS, Summit Co-op Experiences have agreed in principle, but contracts need CFO review. Target resolution: Jan 20.
 2. **Concierge Model** (Owner: Sam, CS Lead) — Summit service: in-house (expensive, high-touch) or outsource? Staffing/cost impact? Target decision: Jan 22.
 3. **Fraud Prevention** (Owner: Engineering) — Referral abuse risk: how do we detect/prevent fake referral rings? Detection rules needed before beta. Target: Feb 5.
 4. **Finance Tier Economics** (Owner: CFO) — Tier discounts, experiential costs, infrastructure investment all need ROI modeling. Awaiting formal review.
@@ -183,7 +183,7 @@ Explicitly **not** in v2 launch:
 | Date | Topic | Owner | Outcome |
 |------|-------|-------|---------|
 | Jan 18 | Initial spec review; alignment on experiential angle | Marcus | Spec approved for stakeholder review, escalation for finance sign-off |
-| Jan 20 | Partner conversation readout | Marcus | AllTrails & REI positive; NPS still negotiating annual volume commitments |
+| Jan 20 | Partner conversation readout | Marcus | AllTrails & Summit Co-op positive; NPS still negotiating annual volume commitments |
 | Jan 23 | CS capacity for concierge | Sam | Outsource preferred; RFP issued to BPOs; decisions by Jan 25 |
 
 ---

@@ -57,13 +57,13 @@ Q4 NPS of 32 represents a 6-point decline from Q3 (38). Analysis reveals shippin
 
 ### Selection & Discovery
 
-> "You've got brands I can't find at REI. That's why I come here first now." — NPS 9, 3-year customer
+> "You've got brands I can't find at Summit Co-op. That's why I come here first now." — NPS 9, 3-year customer
 
 > "The filter options helped me find exactly the right size pack for my torso length. No other site makes it that easy." — NPS 10, verified purchase
 
 ### Value
 
-> "Got the same jacket $40 cheaper than Backcountry. Free shipping sealed the deal." — NPS 9, price-compared
+> "Got the same jacket $40 cheaper than Ridgeline Outfitters. Free shipping sealed the deal." — NPS 9, price-compared
 
 ## Detractor Verbatims by Theme
 
@@ -77,7 +77,7 @@ Q4 NPS of 32 represents a 6-point decline from Q3 (38). Analysis reveals shippin
 
 ### Checkout (47% mention rate)
 
-> "Tried to buy one thing. Forced to create an account. Password requirements were insane. Gave up and bought from Amazon." — NPS 3
+> "Tried to buy one thing. Forced to create an account. Password requirements were insane. Gave up and bought from PrimeGear." — NPS 3
 
 > "Your checkout is stuck in 2015. No Apple Pay, no saved addresses, forms that don't work on mobile. Come on." — NPS 4, returned customer
 

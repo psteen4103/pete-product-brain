@@ -1,6 +1,6 @@
-# Competitor Deep Dive: REI
+# Competitor Deep Dive: Summit Co-op
 
-**Source:** REI Annual Stewardship Report 2025, Morgan Stanley Retail Research, internal analysis  
+**Source:** Summit Co-op Annual Stewardship Report 2025, Morgan Stanley Retail Research, internal analysis  
 **Date:** January 2026
 
 ---
@@ -60,7 +60,7 @@
 ## What Contoso Can Learn
 
 ### Adopt
-- **Expert credibility:** REI's specialist knowledge builds trust. Consider "Contoso Guides" program
+- **Expert credibility:** Summit Co-op's specialist knowledge builds trust. Consider "Contoso Guides" program
 - **Used gear integration:** Re/Supply shows appetite for recommerce at scale
 - **Event-driven engagement:** Classes and trips create emotional connection
 
@@ -71,10 +71,10 @@
 
 ## Strategic Implications
 
-1. **Loyalty program design:** Contoso's tiered approach ([Loyalty v2](/specs/loyalty-program-v2.md)) can be more margin-efficient than REI's flat dividend
+1. **Loyalty program design:** Contoso's tiered approach ([Loyalty v2](/specs/loyalty-program-v2.md)) can be more margin-efficient than Summit Co-op's flat dividend
 2. **Digital-first advantage:** With no stores to protect, Contoso can optimize purely for e-commerce conversion
-3. **Personalization gap:** REI's 23M members with limited personalization = opportunity to differentiate on relevance
-4. **Speed as weapon:** Co-op structure slows REI; Contoso can ship features faster
+3. **Personalization gap:** Summit Co-op's 23M members with limited personalization = opportunity to differentiate on relevance
+4. **Speed as weapon:** Co-op structure slows Summit Co-op; Contoso can ship features faster
 
 ---
 

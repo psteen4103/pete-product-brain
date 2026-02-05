@@ -71,7 +71,7 @@ Cluster analysis revealed four distinct segments:
 - Sustainability is primary purchase driver
 - Will pay 20%+ premium without hesitation
 - Actively seeks certifications (bluesign, Fair Trade)
-- Over-indexes on Patagonia, Cotopaxi purchases
+- Over-indexes on Alpine Trailwear, Cotopaxi purchases
 
 > "I won't buy anything without checking the sustainability page first. I'd rather have fewer, better things." — Focus group, Eco-Champion
 
@@ -121,7 +121,7 @@ Cluster analysis revealed four distinct segments:
 
 > "If your rewards program gave me points for recycling old gear or choosing eco products, I'd be way more engaged than just earning points on purchases." — Survey verbatim
 
-> "REI's dividend feels like I'm part of something. Your points feel like... points." — Survey verbatim
+> "Summit Co-op's dividend feels like I'm part of something. Your points feel like... points." — Survey verbatim
 
 ### On Product Discovery
 
@@ -135,7 +135,7 @@ Cluster analysis revealed four distinct segments:
 
 ## Competitive Comparison
 
-| Feature | REI | Patagonia | Backcountry | Contoso |
+| Feature | Summit Co-op | Alpine Trailwear | Ridgeline Outfitters | Contoso |
 |---------|-----|-----------|-------------|---------|
 | Eco-filter in search | ✓ | ✓ | ✗ | ✗ |
 | Sustainability product badges | ✓ | ✓ | ✗ | ✗ |

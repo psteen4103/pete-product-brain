@@ -1,6 +1,6 @@
-# Competitor Deep Dive: Backcountry
+# Competitor Deep Dive: Ridgeline Outfitters
 
-**Source:** TSG Consumer Partners reports, Backcountry investor materials, Outdoor Industry Association data  
+**Source:** TSG Consumer Partners reports, Ridgeline Outfitters investor materials, Outdoor Industry Association data  
 **Date:** January 2026
 
 ---
@@ -45,7 +45,7 @@
 - Premium positioning challenged by frequent 20-40% sales
 - "Expert advice" messaging diluted by cost cuts
 - Competitor trademark disputes damaged brand perception
-- Struggling to differentiate from REI, Amazon
+- Struggling to differentiate from Summit Co-op, PrimeGear
 
 ## Digital Experience Assessment
 
@@ -59,7 +59,7 @@
 
 ## Differentiation Opportunities for Contoso
 
-### Where Backcountry Excels
+### Where Ridgeline Outfitters Excels
 - Email marketing sophistication (behavior-triggered campaigns)
 - Photography and content quality
 - Category expertise in technical gear
@@ -68,15 +68,15 @@
 ### Where Contoso Can Win
 - **AI-powered guidance:** Scale expertise without headcount via AI assistants
 - **Price transparency:** Avoid promo-dependent model that erodes brand
-- **Sustainability leadership:** Backcountry has minimal eco positioning
-- **Checkout simplicity:** [Checkout Redesign](/specs/checkout-redesign.md) addresses friction Backcountry ignores
+- **Sustainability leadership:** Ridgeline Outfitters has minimal eco positioning
+- **Checkout simplicity:** [Checkout Redesign](/specs/checkout-redesign.md) addresses friction Ridgeline Outfitters ignores
 
 ## Strategic Implications
 
 1. **Expert model evolution:** Human expertise valuable but doesn't scale. Contoso should build AI-augmented guidance that maintains expertise feel at lower cost
-2. **Brand integrity:** Backcountry's PE-driven promotions devalue brand. Contoso should protect premium positioning
-3. **Owned brands opportunity:** Backcountry proves owned brands work for margin. Consider Contoso private label strategy
-4. **Community gap:** Neither Backcountry nor REI have cracked digital community. Opportunity for Contoso to own
+2. **Brand integrity:** Ridgeline Outfitters's PE-driven promotions devalue brand. Contoso should protect premium positioning
+3. **Owned brands opportunity:** Ridgeline Outfitters proves owned brands work for margin. Consider Contoso private label strategy
+4. **Community gap:** Neither Ridgeline Outfitters nor Summit Co-op have cracked digital community. Opportunity for Contoso to own
 
 ## Competitive Intelligence Notes
 

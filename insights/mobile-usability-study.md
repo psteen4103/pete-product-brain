@@ -79,13 +79,13 @@ A SUS score of 52 places our mobile experience in the bottom 15% of e-commerce s
 ## Participant Quotes by Theme
 
 ### Frustration with Speed
-> "Every tap feels like I'm waiting. On Amazon, it's instant." — P01
+> "Every tap feels like I'm waiting. On PrimeGear, it's instant." — P01
 
 ### Trust Concerns
 > "I don't love entering my credit card on a mobile site that feels this clunky." — P06
 
 ### Comparison to Competitors
-> "REI's app just works. Why don't you have an app?" — P12
+> "Summit Co-op's app just works. Why don't you have an app?" — P12
 
 ## Recommendations
 

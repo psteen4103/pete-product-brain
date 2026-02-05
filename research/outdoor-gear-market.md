@@ -29,7 +29,7 @@
 - Gear finder tools becoming standard feature
 
 ### 4. Experience Over Ownership
-- Rental and subscription models growing (Arrive Outdoors, REI rentals)
+- Rental and subscription models growing (Arrive Outdoors, Summit Co-op rentals)
 - "Try before buy" reducing purchase anxiety for expensive gear
 - Appeals to younger, urban consumers with storage constraints
 

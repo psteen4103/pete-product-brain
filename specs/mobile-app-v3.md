@@ -15,7 +15,7 @@ Mobile represents our largest growth opportunity, but our native app is underper
 - App users convert at **23% higher rate** than mobile web (29% vs 23.5%)
 - Current app rating: 3.2 stars (iOS), 3.0 stars (Android) — primary complaints: "crashes," "outdated design," "can't use offline"
 - App last major update: 18 months ago (v2.4)
-- Competitors REI and Backcountry both ship unified apps with native performance (see [Competitive Analysis](/insights/competitive-analysis.md))
+- Competitors Summit Co-op and Ridgeline Outfitters both ship unified apps with native performance (see [Competitive Analysis](/insights/competitive-analysis.md))
 
 Customer feedback indicates desire for offline functionality when camping in areas without connectivity (see [Q4 Customer Feedback](/insights/customer-feedback-q4.md)).
 
@@ -94,7 +94,7 @@ Migrate from separate iOS (Swift) and Android (Kotlin) codebases to a single Rea
 
 ## Competitive Context
 
-REI's app has 4.8 stars with features like "Trail Running Planner" and store pickup integration. Backcountry's app prominently features their "Gearhead" chat. Our AR gear preview would be a differentiator — no major competitor offers this today.
+Summit Co-op's app has 4.8 stars with features like "Trail Running Planner" and store pickup integration. Ridgeline Outfitters's app prominently features their "Gearhead" chat. Our AR gear preview would be a differentiator — no major competitor offers this today.
 
 ## Technical Approach
 

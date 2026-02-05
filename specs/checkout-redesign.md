@@ -74,7 +74,7 @@ Integrate Google Places API to reduce form friction and shipping errors.
 
 ## Competitive Context
 
-REI and Backcountry both offer streamlined 2-step checkouts with prominent guest options. See [Competitive Analysis](/insights/competitive-analysis.md) for details.
+Summit Co-op and Ridgeline Outfitters both offer streamlined 2-step checkouts with prominent guest options. See [Competitive Analysis](/insights/competitive-analysis.md) for details.
 
 ---
 

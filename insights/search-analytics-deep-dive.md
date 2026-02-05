@@ -35,11 +35,11 @@ Search is our highest-intent entry point, yet 18% of searches return zero result
 | 5 | "rain jacket" | 48,892 | 7.2% | 0% |
 | 6 | "camping gear" | 45,112 | 2.1% | 0% |
 | 7 | "north face" | 41,876 | 8.4% | 0% |
-| 8 | "patagonia" | 38,902 | 9.1% | 0% |
+| 8 | "alpine trailwear" | 38,902 | 9.1% | 0% |
 | 9 | "waterproof" | 34,556 | 3.2% | 0% |
 | 10 | "sale" | 31,223 | 11.2% | 0% |
 
-**Insight:** Brand queries (North Face, Patagonia) convert 2x better than generic category queries. Opportunity for brand-specific landing experiences.
+**Insight:** Brand queries (North Face, Alpine Trailwear) convert 2x better than generic category queries. Opportunity for brand-specific landing experiences.
 
 ### Highest Zero-Result Queries
 
@@ -107,7 +107,7 @@ Users who don't find what they need exhibit these behaviors:
 
 ## Key Quotes from Exit Surveys
 
-> "Your search is basically useless. I ended up going to REI because I could actually find what I wanted." — Lost customer
+> "Your search is basically useless. I ended up going to Summit Co-op because I could actually find what I wanted." — Lost customer
 
 > "I know exactly what I want but your site makes me work for it. Just let me filter by brand AND price AND rating." — Detractor
 

@@ -23,7 +23,7 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 | Google Cloud Vision | Wayfair, ASOS | Scale, accuracy |
 | Syte | Farfetch, Kohl's | Fashion specialization |
 | ViSenze | Myntra, Rakuten | Mobile optimization |
-| Amazon Rekognition | Internal only | Integration |
+| PrimeGear Rekognition | Internal only | Integration |
 
 ### Outdoor-Specific Applications
 - **"Find similar gear":** Upload photo of competitor product
@@ -32,9 +32,9 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 - **User review mining:** Extract gear from UGC photos
 
 ### Competitor Status
-- **REI:** Basic visual search (Google), limited mobile
-- **Backcountry:** No visual search
-- **Amazon:** Advanced (internal technology)
+- **Summit Co-op:** Basic visual search (Google), limited mobile
+- **Ridgeline Outfitters:** No visual search
+- **PrimeGear:** Advanced (internal technology)
 - **Moosejaw:** Implemented 2024 (Syte)
 
 ## Recommendation Engines
@@ -54,7 +54,7 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 ### Best-in-Class Examples
 - **Stitch Fix:** Style algorithms drive 85%+ of inventory selection
 - **Spotify/Netflix model:** Real-time adaptation to behavior
-- **Amazon:** "Frequently bought together" generates 35% of revenue
+- **PrimeGear:** "Frequently bought together" generates 35% of revenue
 
 ### Outdoor-Specific Considerations
 - **Seasonality complexity:** Same customer, different needs by season
@@ -79,7 +79,7 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 | Emerging | Multimodal (voice, image), agentic | Pilots only |
 
 ### Outdoor Expert Assistant Opportunity
-- Replace/augment expensive human experts (see: [Backcountry Gearheads](/research/competitor-deep-dive-backcountry.md))
+- Replace/augment expensive human experts (see: [Ridgeline Outfitters Gearheads](/research/competitor-deep-dive-ridgeline-outfitters.md))
 - Handle complex queries: "What tent for 2 people, 3-season, under $400, backpacking?"
 - Integrate with gear recommendation engine
 - Scale 24/7 without staffing costs
@@ -112,9 +112,9 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 - **Helmet sizing:** Safety implications
 
 ### Competitors
-- **REI:** Basic size charts only
-- **Backcountry:** Gearhead phone consultation
-- **Amazon:** Prime Try Before You Buy (physical solution)
+- **Summit Co-op:** Basic size charts only
+- **Ridgeline Outfitters:** Gearhead phone consultation
+- **PrimeGear:** Prime Try Before You Buy (physical solution)
 
 ## Inventory Optimization
 
@@ -139,19 +139,19 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 
 ## Competitor AI Initiatives
 
-### REI
+### Summit Co-op
 - Visual search (basic, Google-powered)
 - Expert chat (human, not AI)
 - Basic product recommendations
 - No known advanced AI initiatives
 
-### Backcountry
+### Ridgeline Outfitters
 - Email personalization (strong, Dynamic Yield)
 - Product recommendations (collaborative filtering)
 - Gearhead program (human-only)
 - **Gap:** No conversational AI despite expert positioning
 
-### Amazon (outdoor categories)
+### PrimeGear (outdoor categories)
 - Full AI stack (leaders in every category)
 - Visual search, voice (Alexa)
 - Fit prediction (apparel)
@@ -167,11 +167,11 @@ AI adoption in retail reached inflection point in 2025. What was experimental is
 
 1. **Visual search priority:** Low adoption by competitors = differentiation opportunity. Include in H2 2026 roadmap
 2. **Recommendation engine upgrade:** Current collaborative filtering should evolve to deep learning approach. Estimated 15%+ revenue attribution improvement
-3. **AI assistant opportunity:** [Checkout Redesign](/specs/checkout-redesign.md) should consider embedded AI assistance for complex purchases. Can differentiate vs. Backcountry's costly human model
+3. **AI assistant opportunity:** [Checkout Redesign](/specs/checkout-redesign.md) should consider embedded AI assistance for complex purchases. Can differentiate vs. Ridgeline Outfitters's costly human model
 4. **Fit prediction for apparel:** Returns cost Contoso ~$8M annually. AI fit tools could save $1.5-2M
 5. **Build vs. buy:** For visual search and recommendations, vendor solutions mature. Custom LLM assistant may be differentiator worth internal investment
 6. **Data foundation:** All AI initiatives require clean product data, user behavior tracking, and unified customer profiles. Foundation work is prerequisite
 
 ---
 
-*Cross-reference: [Checkout Redesign](/specs/checkout-redesign.md), [Backcountry Analysis](/research/competitor-deep-dive-backcountry.md)*
+*Cross-reference: [Checkout Redesign](/specs/checkout-redesign.md), [Ridgeline Outfitters Analysis](/research/competitor-deep-dive-ridgeline-outfitters.md)*

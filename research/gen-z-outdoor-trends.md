@@ -51,7 +51,7 @@ Fashion trend where outdoor/technical wear becomes everyday style. "GORP" = Good
 - **74%** own outdoor gear they've never used outdoors
 - **58%** bought outdoor brand for fashion, later went outdoors
 - **42%** follow outdoor brands for aesthetic, not function
-- **Cross-shopping:** 67% shop both Ssense and REI
+- **Cross-shopping:** 67% shop both Ssense and Summit Co-op
 
 ### Implications
 - Fashion entry point can convert to participation
@@ -91,7 +91,7 @@ Fashion trend where outdoor/technical wear becomes everyday style. "GORP" = Good
 
 ### What "Sustainable" Means to Gen Z
 1. Recycled materials (baseline expectation)
-2. Repair programs (Patagonia Worn Wear model)
+2. Repair programs (Alpine Trailwear Worn Wear model)
 3. Carbon transparency (scope 1, 2, 3 disclosure)
 4. Living wages in supply chain
 5. End-of-life responsibility (take-back programs)
@@ -107,7 +107,7 @@ Fashion trend where outdoor/technical wear becomes everyday style. "GORP" = Good
 | Category | Gen Z Index (vs. avg) | Notes |
 |----------|-----------------------|-------|
 | Technical sandals | 156 | Chaco, Teva, Keen |
-| Fleece | 142 | Vintage Patagonia premium |
+| Fleece | 142 | Vintage Alpine Trailwear premium |
 | Running vests | 134 | Trail running growing |
 | Coolers | 89 | YETI too expensive |
 | Traditional boots | 78 | Trail runners preferred |
