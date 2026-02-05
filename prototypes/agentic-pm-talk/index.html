@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic PM Workflows | Live Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            serif: ['Source Serif 4', 'Georgia', 'serif'],
+          },
+          colors: {
+            sage: {
+              50: '#f6f7f6', 100: '#e3e5e3', 200: '#c7ccc7', 300: '#a3aba3',
+              400: '#7c877c', 500: '#616c61', 600: '#4d564d', 700: '#404640',
+              800: '#363b36', 900: '#2f322f',
+            },
+            forest: { 400: '#4ade80', 500: '#22c55e', 600: '#16a34a' },
+            ember: { 400: '#fb923c', 500: '#f97316', 600: '#ea580c' },
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --bg-primary: #0a0c0a;
+      --bg-card: rgba(17, 20, 17, 0.85);
+      --border-subtle: rgba(163, 171, 163, 0.12);
+      --text-primary: #e8ebe8;
+      --text-secondary: #a3aba3;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+    
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+    
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(74, 222, 128, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 50%),
+        var(--bg-primary);
+    }
+    
+    .slide {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+    
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #4ade80 0%, #a3aba3 50%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .badge-forest { background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.3); }
+    .badge-ember { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+    .badge-sage { background: rgba(163, 171, 163, 0.15); color: #c7ccc7; border: 1px solid rgba(163, 171, 163, 0.3); }
+    
+    /* Notes panel */
+    .notes-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 380px;
+      background: rgba(10, 12, 10, 0.98);
+      border-left: 1px solid var(--border-subtle);
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      backdrop-filter: blur(20px);
+    }
+    
+    .notes-panel.open { transform: translateX(0); }
+    
+    .notes-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .notes-overlay.open { opacity: 1; pointer-events: auto; }
+    
+    .demo-cmd {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-top: 8px;
+    }
+    
+    .demo-cmd .agent { color: #a78bfa; }
+    .demo-cmd .prompt { color: #f97316; }
+    .demo-cmd .file { color: #4ade80; }
+    
+    /* Progress */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #4ade80, #f97316);
+      z-index: 200;
+      transition: width 0.2s ease;
+    }
+    
+    /* Slide counter */
+    .slide-counter {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      font-size: 14px;
+      color: #7c877c;
+      z-index: 50;
+    }
+    
+    /* Keyboard hint */
+    .key-hint {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      height: 24px;
+      padding: 0 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: monospace;
+    }
+    
+    /* Quote styling */
+    .quote-block {
+      position: relative;
+      padding-left: 24px;
+      border-left: 3px solid #4ade80;
+    }
+    
+    .quote-block.warning { border-left-color: #f97316; }
+    
+    /* Metric card */
+    .metric-card {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .metric-value {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
+  </style>
+</head>
+
+<body x-data="slideApp()" @keydown.window="handleKey($event)">
+  <div class="ambient-bg"></div>
+  
+  <!-- Progress bar -->
+  <div class="progress-bar" :style="`width: ${(currentSlide / (totalSlides - 1)) * 100}%`"></div>
+  
+  <!-- Slide counter -->
+  <div class="slide-counter">
+    <span x-text="currentSlide + 1"></span> / <span x-text="totalSlides"></span>
+    <span class="ml-4 text-sage-600">
+      <span class="key-hint">←</span> <span class="key-hint">→</span> navigate
+      <span class="key-hint ml-2">N</span> notes
+    </span>
+  </div>
+  
+  <!-- Notes toggle button -->
+  <button @click="notesOpen = !notesOpen" 
+          class="fixed bottom-8 right-8 z-50 badge badge-sage cursor-pointer hover:bg-sage-700/30 transition-colors">
+    <span class="w-2 h-2 rounded-full bg-forest-400" :class="{ 'animate-pulse': !notesOpen }"></span>
+    <span x-text="notesOpen ? 'Hide Notes' : 'Show Notes'"></span>
+  </button>
+  
+  <!-- Notes overlay -->
+  <div class="notes-overlay" :class="{ 'open': notesOpen }" @click="notesOpen = false"></div>
+  
+  <!-- Notes panel -->
+  <div class="notes-panel" :class="{ 'open': notesOpen }">
+    <div class="p-6 border-b border-sage-800/50 sticky top-0 bg-[#0a0c0a]/95 backdrop-filter backdrop-blur-lg">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-lg font-semibold text-sage-100">Presenter Notes</h2>
+          <p class="text-sage-500 text-sm">Slide <span x-text="currentSlide + 1"></span></p>
+        </div>
+        <button @click="notesOpen = false" class="w-8 h-8 rounded-lg bg-sage-800/50 flex items-center justify-center hover:bg-sage-700/50 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div class="p-6">
+      <template x-if="slides[currentSlide]">
+        <div>
+          <!-- Talking points -->
+          <template x-if="slides[currentSlide].talking">
+            <div class="mb-6">
+              <div class="text-xs text-sage-600 uppercase tracking-wide mb-3">Say This</div>
+              <ul class="space-y-2">
+                <template x-for="point in slides[currentSlide].talking" :key="point">
+                  <li class="flex items-start gap-2 text-sm text-sage-300">
+                    <span class="text-forest-400 mt-1">→</span>
+                    <span x-text="point"></span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
+          
+          <!-- Demo commands -->
+          <template x-if="slides[currentSlide].demo">
+            <div class="mb-6">
+              <div class="text-xs text-sage-600 uppercase tracking-wide mb-3">Live Demo</div>
+              <template x-for="cmd in slides[currentSlide].demo" :key="cmd.action">
+                <div class="mb-4">
+                  <div class="text-sage-400 text-sm mb-1" x-text="cmd.action"></div>
+                  <div class="demo-cmd" x-html="cmd.command"></div>
+                </div>
+              </template>
+            </div>
+          </template>
+          
+          <!-- Files to open -->
+          <template x-if="slides[currentSlide].files">
+            <div class="mb-6">
+              <div class="text-xs text-sage-600 uppercase tracking-wide mb-3">Open in VS Code</div>
+              <template x-for="file in slides[currentSlide].files" :key="file">
+                <div class="flex items-center gap-2 text-sm text-forest-400 font-mono mb-1">
+                  <span>📄</span>
+                  <span x-text="file"></span>
+                </div>
+              </template>
+            </div>
+          </template>
+          
+          <!-- Time estimate -->
+          <template x-if="slides[currentSlide].time">
+            <div class="flex items-center gap-2 text-sm text-sage-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span x-text="slides[currentSlide].time"></span>
+            </div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+  
+  <!-- ============== SLIDES ============== -->
+  
+  <!-- SLIDE 0: Title -->
+  <section class="slide" id="slide-0">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="badge badge-forest mb-8 animate-in">
+        <span>⛰️</span> Contoso Outdoor Gear
+      </span>
+      
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-tight leading-tight animate-in delay-1">
+        Beyond Specs:<br/>
+        <span class="gradient-text">Agentic PM Workflows</span>
+      </h1>
+      
+      <p class="text-xl sm:text-2xl text-sage-300 mb-8 animate-in delay-2">
+        How PMs use AI coding tools for knowledge management,<br class="hidden sm:inline"/> 
+        prototyping, and workflow automation
+      </p>
+      
+      <div class="flex flex-wrap items-center justify-center gap-4 text-sage-400 text-sm animate-in delay-3">
+        <span>Live demo with VS Code + GitHub Copilot</span>
+        <span class="text-sage-600">•</span>
+        <span>~20 minutes</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 1: The Evolution -->
+  <section class="slide" id="slide-1">
+    <div class="max-w-5xl mx-auto">
+      <span class="badge badge-sage mb-6">The Shift</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-12 tracking-tight">
+        PM tools are <span class="gradient-text">evolving</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card p-8 text-center">
+          <div class="text-4xl mb-4">📝</div>
+          <div class="text-sage-400 text-sm mb-2">2010s</div>
+          <div class="text-xl font-semibold text-sage-200 mb-2">Spec Writer</div>
+          <div class="text-sage-500 text-sm">Jira, Confluence, Google Docs</div>
+        </div>
+        
+        <div class="glass-card p-8 text-center">
+          <div class="text-4xl mb-4">🎬</div>
+          <div class="text-sage-400 text-sm mb-2">2020s</div>
+          <div class="text-xl font-semibold text-sage-200 mb-2">Async Communicator</div>
+          <div class="text-sage-500 text-sm">Notion, Linear, Loom</div>
+        </div>
+        
+        <div class="glass-card p-8 text-center border-forest-500/50">
+          <div class="text-4xl mb-4">🧠</div>
+          <div class="text-forest-400 text-sm mb-2">2025+</div>
+          <div class="text-xl font-semibold text-forest-400 mb-2">Prototype Contributor</div>
+          <div class="text-sage-400 text-sm">Cursor, Claude Code, Copilot</div>
+        </div>
+      </div>
+      
+      <div class="mt-12 glass-card p-6 border-l-4 border-forest-500">
+        <p class="font-serif text-lg text-sage-200 italic">
+          "Cursor is a much better product manager than I ever was"
+        </p>
+        <p class="text-sage-500 text-sm mt-2">— Dennis Yang, Principal PM at Chime</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 2: Product Brain Concept -->
+  <section class="slide" id="slide-2">
+    <div class="max-w-5xl mx-auto">
+      <span class="badge badge-forest mb-6">Core Concept</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+        The <span class="gradient-text">Product Brain</span>
+      </h2>
+      <p class="text-xl text-sage-400 mb-12 max-w-2xl">
+        A markdown repo where AI can navigate, query, and synthesize all your product knowledge.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass-card p-6">
+          <div class="font-mono text-sm text-sage-400 mb-4">📁 Repository Structure</div>
+          <pre class="text-sm text-sage-300 leading-relaxed"><code>product-brain/
+├── <span class="text-forest-400">specs/</span>           PRDs, feature specs
+├── <span class="text-forest-400">insights/</span>        Synthesized research
+├── <span class="text-forest-400">research/</span>        Market analysis, data
+├── <span class="text-forest-400">roadmap/</span>         OKRs, priorities
+├── <span class="text-forest-400">analysis/</span>        Jupyter notebooks
+└── <span class="text-forest-400">prototypes/</span>      Working demos</code></pre>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="glass-card p-5 flex items-start gap-4">
+            <div class="text-2xl">🔍</div>
+            <div>
+              <div class="text-sage-200 font-medium">Semantic Search</div>
+              <div class="text-sage-500 text-sm">Query across all product knowledge instantly</div>
+            </div>
+          </div>
+          <div class="glass-card p-5 flex items-start gap-4">
+            <div class="text-2xl">🔗</div>
+            <div>
+              <div class="text-sage-200 font-medium">Cross-References</div>
+              <div class="text-sage-500 text-sm">Insights link to specs, specs link to roadmap</div>
+            </div>
+          </div>
+          <div class="glass-card p-5 flex items-start gap-4">
+            <div class="text-2xl">📜</div>
+            <div>
+              <div class="text-sage-200 font-medium">Version History</div>
+              <div class="text-sage-500 text-sm">See how decisions evolved over time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 3: Agent Primitives -->
+  <section class="slide" id="slide-3">
+    <div class="max-w-5xl mx-auto">
+      <span class="badge badge-sage mb-6">Building Blocks</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-12 tracking-tight">
+        Agent <span class="gradient-text">customization</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">📋</span>
+            <span class="text-sage-200 font-semibold">Workspace Instructions</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Always-on context about company, conventions, personas</p>
+          <code class="text-xs text-sage-500 font-mono">.github/copilot-instructions.md</code>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">📁</span>
+            <span class="text-sage-200 font-semibold">File Instructions</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Auto-attach when editing specific file patterns</p>
+          <code class="text-xs text-sage-500 font-mono">applyTo: "specs/**"</code>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-ember-400 text-2xl">/</span>
+            <span class="text-sage-200 font-semibold">Prompts</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Reusable workflows invoked with slash commands</p>
+          <code class="text-xs text-ember-400 font-mono">/feedback-synthesis</code>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-purple-400 text-2xl">🤖</span>
+            <span class="text-sage-200 font-semibold">Custom Agents</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Specialized personas with tool restrictions</p>
+          <code class="text-xs text-purple-400 font-mono">[Scaffold] from agent picker</code>
+        </div>
+      </div>
+      
+      <div class="text-center text-sage-500 text-sm">
+        Agents are selected via <strong class="text-sage-300">agent dropdown</strong> in VS Code, not @-mentioned
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 4: Our Demo Journey -->
+  <section class="slide" id="slide-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="badge badge-ember mb-6">Live Demo</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+        The <span class="gradient-text">Sustainability Dashboard</span>
+      </h2>
+      <p class="text-xl text-sage-400 mb-12 max-w-2xl mx-auto">
+        A real product initiative at Contoso. We have the spec and research — 
+        let's build it together, live.
+      </p>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+        <div class="glass-card p-5">
+          <div class="text-forest-400 text-3xl mb-3">1</div>
+          <div class="text-sage-200 font-medium mb-1">Explore</div>
+          <div class="text-sage-500 text-sm">What does Contoso know about sustainability?</div>
+        </div>
+        
+        <div class="glass-card p-5">
+          <div class="text-forest-400 text-3xl mb-3">2</div>
+          <div class="text-sage-200 font-medium mb-1">Analyze</div>
+          <div class="text-sage-500 text-sm">Dig into customer attitudes with notebooks</div>
+        </div>
+        
+        <div class="glass-card p-5">
+          <div class="text-forest-400 text-3xl mb-3">3</div>
+          <div class="text-sage-200 font-medium mb-1">Prototype</div>
+          <div class="text-sage-500 text-sm">Build the Personal Impact Dashboard</div>
+        </div>
+        
+        <div class="glass-card p-5">
+          <div class="text-forest-400 text-3xl mb-3">4</div>
+          <div class="text-sage-200 font-medium mb-1">Challenge</div>
+          <div class="text-sage-500 text-sm">Stress-test with Design Partner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 5: Explore Demo -->
+  <section class="slide" id="slide-5">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">🔍</span>
+        <div>
+          <div class="text-sage-500 text-sm">Step 1</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">Explore the Knowledge</h2>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sage-400 mb-6">
+            Before building anything, understand what Contoso already knows about sustainability.
+          </p>
+          
+          <div class="glass-card p-5 mb-4">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Agent</div>
+            <div class="text-purple-400 font-medium">Explore</div>
+            <div class="text-sage-500 text-sm mt-1">Read-only research across the product brain</div>
+          </div>
+          
+          <div class="glass-card p-5">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Ask</div>
+            <div class="text-sage-200">"What do we know about customer sustainability preferences?"</div>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6 border-l-4 border-forest-500">
+          <div class="text-forest-400 font-medium mb-4">What it finds:</div>
+          <ul class="space-y-3 text-sage-300 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-forest-400">→</span>
+              <span><strong>specs/sustainability-dashboard.md</strong> — Approved spec with Impact Dashboard concept</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-forest-400">→</span>
+              <span><strong>insights/sustainability-survey-2025.md</strong> — 68% say sustainability influences purchases</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-forest-400">→</span>
+              <span><strong>research/gen-z-outdoor-trends.md</strong> — Gen Z expects eco transparency</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-forest-400">→</span>
+              <span><strong>specs/loyalty-program-v2.md</strong> — Sustainability perks in Trail Rewards</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 6: Analyze Demo -->
+  <section class="slide" id="slide-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">📊</span>
+        <div>
+          <div class="text-sage-500 text-sm">Step 2</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">Analyze Customer Data</h2>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sage-400 mb-6">
+            The Explore agent found the sustainability survey insight. Let's dig deeper into the raw data.
+          </p>
+          
+          <div class="glass-card p-5 mb-4">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Agent</div>
+            <div class="text-purple-400 font-medium">Data Analyst</div>
+            <div class="text-sage-500 text-sm mt-1">Creates Jupyter notebooks with EDA, stats, visualizations</div>
+          </div>
+          
+          <div class="glass-card p-5">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Ask</div>
+            <div class="text-sage-200">"Analyze research/data/customer-survey-2025.csv — what predicts sustainability interest?"</div>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="text-forest-400 font-medium mb-4">What it produces:</div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">📓</span>
+              <div>
+                <div class="text-sage-200">Jupyter Notebook</div>
+                <div class="text-sage-500 text-sm">analysis/notebooks/sustainability-analysis.ipynb</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">📈</span>
+              <div>
+                <div class="text-sage-200">Cross-tab visualizations</div>
+                <div class="text-sage-500 text-sm">Age × sustainability interest, Tenure × willingness to pay premium</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">🎯</span>
+              <div>
+                <div class="text-sage-200">Key finding</div>
+                <div class="text-sage-500 text-sm">"Eco-Advocates" segment: high NPS, 2.3x LTV, 31% of base</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 7: Prototype Demo -->
+  <section class="slide" id="slide-7">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">⚡</span>
+        <div>
+          <div class="text-sage-500 text-sm">Step 3</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">Build the Prototype</h2>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sage-400 mb-6">
+            Now that we understand the opportunity, let's build a working demo of the Personal Impact Dashboard.
+          </p>
+          
+          <div class="glass-card p-5 mb-4">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Agent</div>
+            <div class="text-purple-400 font-medium">Scaffold</div>
+            <div class="text-sage-500 text-sm mt-1">Builds HTML/Tailwind/Alpine.js prototypes</div>
+          </div>
+          
+          <div class="glass-card p-5">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Ask</div>
+            <div class="text-sage-200">"Build a Personal Impact Dashboard prototype based on specs/sustainability-dashboard.md"</div>
+          </div>
+        </div>
+        
+        <div class="glass-card p-6 border-l-4 border-ember-500">
+          <div class="text-ember-400 font-medium mb-4">Spec highlights it will use:</div>
+          <ul class="space-y-2 text-sage-300 text-sm">
+            <li>• Lifetime CO2 offset counter</li>
+            <li>• Eco-certified purchase percentage</li>
+            <li>• Trees planted equivalent</li>
+            <li>• Shareable "Impact Card" for social</li>
+            <li>• Carbon offset calculator</li>
+          </ul>
+          <div class="mt-4 pt-4 border-t border-sage-800/50">
+            <div class="text-sage-500 text-sm">Output: <code class="text-forest-400">prototypes/sustainability-dashboard/index.html</code></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 8: Challenge Demo -->
+  <section class="slide" id="slide-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">🤔</span>
+        <div>
+          <div class="text-sage-500 text-sm">Step 4</div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">Challenge Our Thinking</h2>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sage-400 mb-6">
+            Before stakeholder review, stress-test the approach. Find the blind spots before execs do.
+          </p>
+          
+          <div class="glass-card p-5 mb-4">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Agent</div>
+            <div class="text-purple-400 font-medium">Design Partner</div>
+            <div class="text-sage-500 text-sm mt-1">Devil's advocate, Socratic questioning</div>
+          </div>
+          
+          <div class="glass-card p-5">
+            <div class="text-sage-500 text-xs uppercase tracking-wide mb-2">Ask</div>
+            <div class="text-sage-200">"What's the strongest argument against specs/sustainability-dashboard.md?"</div>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="glass-card p-5 border-l-4 border-ember-500">
+            <div class="text-ember-400 font-medium mb-2">Devil's Advocate Mode</div>
+            <p class="text-sage-400 text-sm italic">"How do you calculate CO2 offset without supplier data? Using industry estimates risks greenwashing accusations."</p>
+          </div>
+          
+          <div class="glass-card p-5 border-l-4 border-forest-500">
+            <div class="text-forest-400 font-medium mb-2">Socratic Mode</div>
+            <p class="text-sage-400 text-sm italic">"What would need to be true for customers to actually share their Impact Cards? Have you validated that assumption?"</p>
+          </div>
+          
+          <div class="glass-card p-5 border-l-4 border-sage-500">
+            <div class="text-sage-300 font-medium mb-2">Blind Spot Hunter</div>
+            <p class="text-sage-400 text-sm italic">"Who loses if this succeeds? Non-eco products could see cannibalization. Have you modeled that?"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 9: Workflow Summary -->
+  <section class="slide" id="slide-9">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="badge badge-forest mb-6">The Pattern</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-12 tracking-tight">
+        What just <span class="gradient-text">happened</span>
+      </h2>
+      
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+        <div class="glass-card px-6 py-4">
+          <div class="text-2xl mb-2">🔍</div>
+          <div class="text-sage-300 text-sm">Explore</div>
+        </div>
+        <div class="text-forest-400 text-2xl">→</div>
+        <div class="glass-card px-6 py-4">
+          <div class="text-2xl mb-2">📊</div>
+          <div class="text-sage-300 text-sm">Analyze</div>
+        </div>
+        <div class="text-forest-400 text-2xl">→</div>
+        <div class="glass-card px-6 py-4">
+          <div class="text-2xl mb-2">⚡</div>
+          <div class="text-sage-300 text-sm">Prototype</div>
+        </div>
+        <div class="text-forest-400 text-2xl">→</div>
+        <div class="glass-card px-6 py-4">
+          <div class="text-2xl mb-2">🤔</div>
+          <div class="text-sage-300 text-sm">Challenge</div>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="glass-card p-6">
+          <div class="text-forest-400 font-bold text-3xl mb-2">~15 min</div>
+          <div class="text-sage-300">From question to working prototype</div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="text-forest-400 font-bold text-3xl mb-2">0 meetings</div>
+          <div class="text-sage-300">No handoffs, no waiting for engineering</div>
+        </div>
+        <div class="glass-card p-6">
+          <div class="text-forest-400 font-bold text-3xl mb-2">Full context</div>
+          <div class="text-sage-300">Citations, cross-refs, traceable decisions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 10: Other Scenarios -->
+  <section class="slide" id="slide-10">
+    <div class="max-w-5xl mx-auto">
+      <span class="badge badge-sage mb-6">More Workflows</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-8 tracking-tight">
+        What else can you <span class="gradient-text">do</span>?
+      </h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-ember-400 text-xl">/</span>
+            <span class="text-sage-200 font-semibold">feedback-synthesis</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Raw feedback → themed insight document with quotes</p>
+          <div class="text-sage-600 text-xs">Paste 50 NPS comments, get structured analysis</div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-ember-400 text-xl">/</span>
+            <span class="text-sage-200 font-semibold">spec-explainer</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">PRD → polished stakeholder page</p>
+          <div class="text-sage-600 text-xs">Execs don't read 15-page specs — they scan beautiful summaries</div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-ember-400 text-xl">/</span>
+            <span class="text-sage-200 font-semibold">meeting-prep</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Gather context, surface open questions</p>
+          <div class="text-sage-600 text-xs">"Prepare me for the checkout review with engineering"</div>
+        </div>
+        
+        <div class="glass-card p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-ember-400 text-xl">/</span>
+            <span class="text-sage-200 font-semibold">issue-from-insight</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Insight → GitHub Issue with labels & context</p>
+          <div class="text-sage-600 text-xs">Traceable from customer quote to shipped feature</div>
+        </div>
+        
+        <div class="glass-card p-6 md:col-span-2">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-purple-400 text-xl">🤖</span>
+            <span class="text-sage-200 font-semibold">Diverge Agent</span>
+          </div>
+          <p class="text-sage-400 text-sm mb-3">Explore 3+ variations via cloud coding agent PRs</p>
+          <div class="text-sage-600 text-xs">"Compare minimal-mvp vs full-featured vs progressive-enhancement" — get actual PR branches to review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 11: Cautions -->
+  <section class="slide" id="slide-11">
+    <div class="max-w-4xl mx-auto">
+      <span class="badge badge-ember mb-6">⚠️ Cautions</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-12 tracking-tight">
+        What to <span class="text-ember-400">watch out for</span>
+      </h2>
+      
+      <div class="space-y-6">
+        <div class="glass-card p-6 border-l-4 border-ember-500">
+          <div class="text-sage-200 font-semibold mb-2">"Almost right" is risky</div>
+          <p class="text-sage-400 text-sm">AI-generated code and analysis needs human review. The 90% that looks correct makes the 10% that's wrong harder to spot.</p>
+        </div>
+        
+        <div class="glass-card p-6 border-l-4 border-ember-500">
+          <div class="text-sage-200 font-semibold mb-2">Tool adoption ≠ Impact</div>
+          <p class="text-sage-400 text-sm">Measure outcomes (conversion, customer satisfaction) not activity (prompts run, prototypes built). Easy to confuse motion with progress.</p>
+        </div>
+        
+        <div class="glass-card p-6 border-l-4 border-ember-500">
+          <div class="text-sage-200 font-semibold mb-2">Role clarity matters</div>
+          <p class="text-sage-400 text-sm">When PMs ship prototypes, who owns quality? When AI drafts specs, who validates claims? Define governance before scaling.</p>
+        </div>
+      </div>
+      
+      <div class="mt-10 glass-card p-6 border-l-4 border-sage-500">
+        <p class="font-serif text-lg text-sage-200 italic">
+          "Vibe coding your way to a production codebase is clearly risky."
+        </p>
+        <p class="text-sage-500 text-sm mt-2">— Simon Willison</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SLIDE 12: Try It -->
+  <section class="slide" id="slide-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="badge badge-forest mb-6">Get Started</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold mb-6 tracking-tight">
+        Try it <span class="gradient-text">yourself</span>
+      </h2>
+      
+      <div class="glass-card p-8 mb-8 text-left inline-block">
+        <pre class="text-lg text-sage-200 font-mono"><code>git clone https://github.com/digitarald/product-brain
+code product-brain</code></pre>
+      </div>
+      
+      <div class="grid sm:grid-cols-3 gap-6 text-left mb-12">
+        <div class="glass-card p-5">
+          <div class="text-forest-400 font-bold mb-2">1. Explore</div>
+          <div class="text-sage-400 text-sm">Open any spec, ask about it</div>
+        </div>
+        <div class="glass-card p-5">
+          <div class="text-forest-400 font-bold mb-2">2. Try prompts</div>
+          <div class="text-sage-400 text-sm">Type <code class="text-ember-400">/</code> to see available</div>
+        </div>
+        <div class="glass-card p-5">
+          <div class="text-forest-400 font-bold mb-2">3. Try agents</div>
+          <div class="text-sage-400 text-sm">Switch via agent dropdown</div>
+        </div>
+      </div>
+      
+      <p class="text-sage-500">
+        7 demo scenarios in README • 7 custom agents • Real Jupyter notebooks • Interactive prototypes
+      </p>
+    </div>
+  </section>
+  
+  <script>
+    function slideApp() {
+      return {
+        currentSlide: 0,
+        totalSlides: 13,
+        notesOpen: false,
+        
+        slides: [
+          // Slide 0: Title
+          {
+            talking: [
+              "Welcome! Today we're exploring how PMs use AI coding tools beyond just 'write me some code'",
+              "This isn't about becoming an engineer — it's about knowledge management, rapid prototyping, and workflow automation",
+              "We'll do a live demo using a real Product Brain repo for Contoso outdoor gear"
+            ],
+            time: "1 min"
+          },
+          // Slide 1: Evolution
+          {
+            talking: [
+              "PM tools have evolved from spec writing (Jira/Confluence) to async communication (Notion/Loom)",
+              "Now we're seeing PMs become prototype contributors — not replacing engineers, but reducing handoff friction",
+              "Dennis Yang at Chime said Cursor is a better PM than he ever was — because it connects all the dots"
+            ],
+            time: "1 min"
+          },
+          // Slide 2: Product Brain
+          {
+            talking: [
+              "A Product Brain is a markdown repo where AI can navigate all your product knowledge",
+              "Unlike Notion or Confluence, markdown repos are AI-native — LLMs understand them natively",
+              "Everything links together: specs cite insights, insights cite research, roadmap references dependencies"
+            ],
+            files: ["README.md"],
+            time: "2 min"
+          },
+          // Slide 3: Primitives
+          {
+            talking: [
+              "Four building blocks for customizing AI behavior",
+              "Workspace instructions = always-on context about your company",
+              "File instructions = auto-attach when editing certain files",
+              "Prompts = reusable workflows with slash commands",
+              "Custom agents = specialized personas selected via dropdown — NOT @-mentioned"
+            ],
+            time: "1 min"
+          },
+          // Slide 4: Journey intro
+          {
+            talking: [
+              "For our live demo, we'll build the Sustainability Dashboard — an APPROVED spec that doesn't have a prototype yet",
+              "This is a real journey you can follow: explore, analyze, prototype, challenge",
+              "Everything we do will be fresh — nothing pre-baked"
+            ],
+            files: ["specs/sustainability-dashboard.md"],
+            time: "1 min"
+          },
+          // Slide 5: Explore demo
+          {
+            talking: [
+              "First, we ask what Contoso already knows about sustainability",
+              "The Explore agent searches across ALL content — specs, insights, research",
+              "It returns citations so you can verify and dive deeper"
+            ],
+            demo: [
+              { action: "Switch to Explore agent", command: "Use agent picker (Ctrl+/ or dropdown)" },
+              { action: "Query the product brain", command: "\"What do we know about customer sustainability preferences?\"" }
+            ],
+            files: ["specs/sustainability-dashboard.md"],
+            time: "3 min"
+          },
+          // Slide 6: Analyze demo
+          {
+            talking: [
+              "The survey insight says 68% care about sustainability — but what predicts that?",
+              "Data Analyst agent creates a Jupyter notebook with pandas, matplotlib, real analysis",
+              "Show the charts, the cross-tabs, the statistical findings"
+            ],
+            demo: [
+              { action: "Switch to Data Analyst agent", command: "Use agent picker" },
+              { action: "Analyze survey data", command: "\"Analyze research/data/customer-survey-2025.csv — what predicts sustainability interest?\"" }
+            ],
+            time: "4 min"
+          },
+          // Slide 7: Prototype demo
+          {
+            talking: [
+              "Now we have context — let's build something you can click",
+              "Scaffold agent reads the spec and builds HTML/Tailwind/Alpine.js",
+              "No build step — stakeholders can open the file directly",
+              "This used to require scheduling a meeting with engineering"
+            ],
+            demo: [
+              { action: "Switch to Scaffold agent", command: "Use agent picker" },
+              { action: "Build prototype from spec", command: "\"Build a Personal Impact Dashboard prototype based on specs/sustainability-dashboard.md\"" },
+              { action: "Preview result", command: "Open prototypes/sustainability-dashboard/index.html" }
+            ],
+            time: "5 min"
+          },
+          // Slide 8: Challenge demo
+          {
+            talking: [
+              "Before showing execs, stress-test the thinking",
+              "Design Partner is a devil's advocate — finds the holes",
+              "Better to hear 'what about greenwashing risk?' now than in the exec review"
+            ],
+            demo: [
+              { action: "Switch to Design Partner agent", command: "Use agent picker" },
+              { action: "Challenge the spec", command: "\"What's the strongest argument against specs/sustainability-dashboard.md?\"" }
+            ],
+            time: "3 min"
+          },
+          // Slide 9: Summary
+          {
+            talking: [
+              "In ~15 minutes: explored existing knowledge, analyzed customer data, built a clickable prototype, and stress-tested the approach",
+              "Zero meetings, zero handoffs, full context preserved",
+              "This is the new PM workflow — not replacing engineering, but reducing friction"
+            ],
+            time: "1 min"
+          },
+          // Slide 10: Other scenarios
+          {
+            talking: [
+              "Quick overview of other workflows in the repo",
+              "feedback-synthesis turns messy NPS comments into structured insights",
+              "spec-explainer creates stakeholder-ready pages",
+              "Diverge agent creates actual PR branches to compare approaches",
+              "All documented in the README"
+            ],
+            time: "2 min"
+          },
+          // Slide 11: Cautions
+          {
+            talking: [
+              "Important to acknowledge the risks",
+              "AI output needs review — the 90% that's right makes the 10% that's wrong dangerous",
+              "Don't confuse tool adoption with actual impact — measure outcomes",
+              "Role clarity: who owns quality when PMs ship prototypes?"
+            ],
+            time: "1 min"
+          },
+          // Slide 12: Try it
+          {
+            talking: [
+              "The repo is public — clone it and try the demo scenarios yourself",
+              "7 agents, 4 prompts, real Jupyter notebooks, working prototypes",
+              "Customize it for your own product knowledge"
+            ],
+            time: "1 min"
+          }
+        ],
+        
+        handleKey(e) {
+          if (e.key === 'ArrowRight' || e.key === ' ') {
+            this.nextSlide();
+          } else if (e.key === 'ArrowLeft') {
+            this.prevSlide();
+          } else if (e.key === 'n' || e.key === 'N') {
+            this.notesOpen = !this.notesOpen;
+          }
+        },
+        
+        nextSlide() {
+          if (this.currentSlide < this.totalSlides - 1) {
+            this.currentSlide++;
+            this.scrollToSlide();
+          }
+        },
+        
+        prevSlide() {
+          if (this.currentSlide > 0) {
+            this.currentSlide--;
+            this.scrollToSlide();
+          }
+        },
+        
+        scrollToSlide() {
+          const slide = document.getElementById(`slide-${this.currentSlide}`);
+          if (slide) {
+            slide.scrollIntoView({ behavior: 'smooth' });
+          }
+        },
+        
+        init() {
+          // Watch for scroll to update current slide
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const slideNum = parseInt(entry.target.id.split('-')[1]);
+                this.currentSlide = slideNum;
+              }
+            });
+          }, { threshold: 0.5 });
+          
+          for (let i = 0; i < this.totalSlides; i++) {
+            const slide = document.getElementById(`slide-${i}`);
+            if (slide) observer.observe(slide);
+          }
+        }
+      };
+    }
+  </script>
+</body>
+</html>
