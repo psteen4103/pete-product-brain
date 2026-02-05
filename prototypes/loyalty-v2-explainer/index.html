@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trail Rewards: The Future of Loyalty</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1a2d 100%);
+      color: #e6edf3;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: -0.5px; }
+    
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(90deg, #58a6ff 0%, #a371f7 50%, #58a6ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Accent Colors by Tier */
+    .explorer-accent { border-color: #1f6feb; }
+    .trailblazer-accent { border-color: #d29922; }
+    .summit-accent { border-color: #79c0ff; }
+    
+    .explorer-bg { background: linear-gradient(135deg, rgba(31, 111, 235, 0.1) 0%, rgba(31, 111, 235, 0.05) 100%); }
+    .trailblazer-bg { background: linear-gradient(135deg, rgba(210, 153, 34, 0.1) 0%, rgba(210, 153, 34, 0.05) 100%); }
+    .summit-bg { background: linear-gradient(135deg, rgba(121, 192, 255, 0.15) 0%, rgba(121, 192, 255, 0.05) 100%); }
+    
+    /* Cards & Depth */
+    .card {
+      background: rgba(22, 27, 34, 0.8);
+      border: 1px solid rgba(230, 237, 243, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      border-color: rgba(230, 237, 243, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(10, 10, 20, 0.4);
+    }
+    
+    /* Tier Cards */
+    .tier-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .tier-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, rgba(88, 166, 255, 0.8), transparent);
+    }
+    
+    .tier-card.explorer::before { background: linear-gradient(90deg, #1f6feb, transparent); }
+    .tier-card.trailblazer::before { background: linear-gradient(90deg, #d29922, transparent); }
+    .tier-card.summit::before { background: linear-gradient(90deg, #79c0ff, transparent); }
+    
+    .tier-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    
+    .explorer-icon { background: rgba(31, 111, 235, 0.2); color: #79c0ff; }
+    .trailblazer-icon { background: rgba(210, 153, 34, 0.2); color: #ffd500; }
+    .summit-icon { background: rgba(121, 192, 255, 0.25); color: #d9e8ff; }
+    
+    /* Metrics Grid */
+    .metric-value {
+      font-size: 32px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #58a6ff, #a371f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+      position: relative;
+      padding-left: 40px;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #58a6ff;
+    }
+    
+    .timeline-item.completed::before { background: #3fb950; }
+    .timeline-item.current::before { 
+      background: #d29922;
+      box-shadow: 0 0 0 4px rgba(210, 153, 34, 0.3);
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 18px;
+      width: 2px;
+      height: calc(100% + 8px);
+      background: rgba(88, 166, 255, 0.2);
+    }
+    
+    .timeline-item:last-child::after { display: none; }
+    
+    /* Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #58a6ff, #79c0ff);
+      color: #0d1117;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(88, 166, 255, 0.3);
+    }
+    
+    /* Comparison Grid */
+    .comparison-grid {
+      display: grid;
+      gap: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr 1fr; }
+    }
+    
+    /* Benefit Badge */
+    .benefit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(88, 166, 255, 0.15);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin: 6px 0;
+    }
+    
+    /* Section Spacing */
+    .section {
+      margin-bottom: 80px;
+    }
+    
+    section:first-of-type { margin-top: 60px; }
+    
+    /* Problem Stats */
+    .pain-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    
+    .pain-stat .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #f85149;
+    }
+    
+    .pain-stat .label { color: #79c0ff; font-size: 16px; }
+    
+    /* Scroll Animation Trigger */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(88, 166, 255, 0.2);
+      padding: 40px 0;
+      margin-top: 120px;
+      color: rgba(230, 237, 243, 0.6);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto px-6 max-w-5xl">
+    
+    <!-- HERO SECTION -->
+    <section class="py-20 text-center">
+      <h1 class="text-5xl md:text-6xl gradient-text mb-6 font-bold">
+        Trail Rewards
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-4">
+        Loyalty reimagined for adventurers, not point-hoarders
+      </p>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Transform a broken 12% redemption program into an experiential community where every tier unlocks real adventure benefits.
+      </p>
+      <button class="btn-primary">Read the Full Spec</button>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">The Problem: Loyalty Is Broken</h2>
+      
+      <div class="card p-8 mb-6">
+        <p class="text-gray-300 mb-8 text-lg">
+          Our current points-based Contoso Rewards program has critical engagement issues. Members aren't redeeming, NPS is tanking, and we're losing competitive space to modern tier-based programs.
+        </p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="pain-stat">
+            <div class="value">12%</div>
+            <div>
+              <div class="label">Redemption rate</div>
+              <div class="text-sm text-gray-400">(Industry benchmark: 25-30%)</div>
+            </div>
+          </div>
+          
+          <div class="pain-stat">
+            <div class="value">+12</div>
+            <div>
+              <div class="label">Program NPS</div>
+              <div class="text-sm text-gray-400">(Brand overall: +45)</div>
+            </div>
+          </div>
+          
+          <div class="pain-stat">
+            <div class="value">Only 8%</div>
+            <div>
+              <div class="label">Reach first reward</div>
+              <div class="text-sm text-gray-400">500-point threshold too high</div>
+            </div>
+          </div>
+          
+          <div class="pain-stat">
+            <div class="value">23%</div>
+            <div>
+              <div class="label">Active member rate</div>
+              <div class="text-sm text-gray-400">Most members have abandoned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card p-4 text-center">
+          <div class="text-2xl mb-2">😕</div>
+          <p class="text-sm"><strong>Confused</strong><br/>How many points = what value?</p>
+        </div>
+        <div class="card p-4 text-center">
+          <div class="text-2xl mb-2">😑</div>
+          <p class="text-sm"><strong>Unrewarded</strong><br/>Points feel meaningless</p>
+        </div>
+        <div class="card p-4 text-center">
+          <div class="text-2xl mb-2">🙄</div>
+          <p class="text-sm"><strong>Cynical</strong><br/>This is just a spending trap</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">The Solution: Trail Rewards</h2>
+      
+      <p class="text-lg text-gray-300 mb-12">
+        Replace accumulation mechanics with <strong>experiential tiers</strong>. Members climb from Explorer → Trailblazer → Summit, unlocking adventure benefits that feel like real value.
+      </p>
+      
+      <!-- Tier Cards -->
+      <div x-data="{ expanded: 'explorer' }" class="comparison-grid mb-12">
+        
+        <!-- Explorer -->
+        <div 
+          class="tier-card card explorer p-8 explorer-bg rounded-lg"
+          @click="expanded = expanded === 'explorer' ? '' : 'explorer'"
+          :class="{ 'ring-2 ring-offset-2 ring-offset-[#0d1117] ring-blue-500': expanded === 'explorer' }"
+        >
+          <div class="explorer-icon tier-icon">🧭</div>
+          <h3 class="text-2xl font-bold mb-2" style="color: #79c0ff;">Explorer</h3>
+          <p class="text-sm text-gray-400 mb-4">The Discovery Tier</p>
+          
+          <div class="mb-4 p-3 bg-black/40 rounded text-sm">
+            <strong>Get Started:</strong> Free signup
+          </div>
+          
+          <div x-show="expanded === 'explorer'" class="space-y-3 mt-6 pt-6 border-t border-blue-500/20">
+            <div class="benefit-badge">
+              <span>🎁</span> 5% rewards back on all purchases
+            </div>
+            <div class="benefit-badge">
+              <span>🎉</span> Birthday exclusive rewards
+            </div>
+            <div class="benefit-badge">
+              <span>⏰</span> Early sale access (48 hrs)
+            </div>
+            <div class="benefit-badge">
+              <span>📱</span> App-exclusive discounts
+            </div>
+          </div>
+        </div>
+
+        <!-- Trailblazer -->
+        <div 
+          class="tier-card card trailblazer p-8 trailblazer-bg rounded-lg"
+          @click="expanded = expanded === 'trailblazer' ? '' : 'trailblazer'"
+          :class="{ 'ring-2 ring-offset-2 ring-offset-[#0d1117] ring-yellow-500': expanded === 'trailblazer' }"
+        >
+          <div class="trailblazer-icon tier-icon">⛰️</div>
+          <h3 class="text-2xl font-bold mb-2" style="color: #ffd500;">Trailblazer</h3>
+          <p class="text-sm text-gray-400 mb-4">The Active Adventurer</p>
+          
+          <div class="mb-4 p-3 bg-black/40 rounded text-sm">
+            <strong>Qualify:</strong> $500/year spend or 3+ purchases
+          </div>
+          
+          <div x-show="expanded === 'trailblazer'" class="space-y-3 mt-6 pt-6 border-t border-yellow-500/20">
+            <div class="benefit-badge">
+              <span>💰</span> 10% rewards back
+            </div>
+            <div class="benefit-badge">
+              <span>🚚</span> Free shipping on all orders
+            </div>
+            <div class="benefit-badge">
+              <span>🏕️</span> Gear rental discounts (REI partner)
+            </div>
+            <div class="benefit-badge">
+              <span>🗺️</span> AllTrails Pro access
+            </div>
+            <div class="benefit-badge">
+              <span>👥</span> Exclusive member events
+            </div>
+          </div>
+        </div>
+
+        <!-- Summit -->
+        <div 
+          class="tier-card card summit p-8 summit-bg rounded-lg"
+          @click="expanded = expanded === 'summit' ? '' : 'summit'"
+          :class="{ 'ring-2 ring-offset-2 ring-offset-[#0d1117] ring-cyan-400': expanded === 'summit' }"
+        >
+          <div class="summit-icon tier-icon">🏔️</div>
+          <h3 class="text-2xl font-bold mb-2" style="color: #d9e8ff;">Summit</h3>
+          <p class="text-sm text-gray-400 mb-4">The Community Leader</p>
+          
+          <div class="mb-4 p-3 bg-black/40 rounded text-sm">
+            <strong>Qualify:</strong> $1,500+/year spend
+          </div>
+          
+          <div x-show="expanded === 'summit'" class="space-y-3 mt-6 pt-6 border-t border-cyan-400/30">
+            <div class="benefit-badge">
+              <span>⭐</span> 15% rewards back
+            </div>
+            <div class="benefit-badge">
+              <span>🎁</span> Exclusive product drops
+            </div>
+            <div class="benefit-badge">
+              <span>🤝</span> Dedicated concierge service
+            </div>
+            <div class="benefit-badge">
+              <span>🧪</span> <strong>Gear try-before-buy</strong> (2 weeks)
+            </div>
+            <div class="benefit-badge">
+              <span>🏞️</span> National park partnerships
+            </div>
+            <div class="benefit-badge">
+              <span>🌱</span> Trail cleanup event invites
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-center text-gray-400 text-sm">
+        💡 Click any tier above to see full benefits
+      </p>
+    </section>
+
+    <!-- KEY BENEFITS SECTION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">Why Members Will Actually Engage</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card p-8 summit-bg">
+          <div class="text-4xl mb-4">🧪</div>
+          <h3 class="text-xl font-bold mb-3" style="color: #79c0ff;">Gear Try-Before-Buy</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Summit members rent new gear for 2 weeks before committing to purchase. Real-world testing builds trust and reduces buyer anxiety.
+          </p>
+          <p class="text-xs text-gray-400">Exclusive to Summit tier</p>
+        </div>
+        
+        <div class="card p-8 trailblazer-bg">
+          <div class="text-4xl mb-4">🗺️</div>
+          <h3 class="text-xl font-bold mb-3" style="color: #ffd500;">Adventure Access</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            AllTrails Pro maps, national park passes, REI Experiences discounts. Members aren't earning points—they're unlocking journeys.
+          </p>
+          <p class="text-xs text-gray-400">Trailblazer & Summit</p>
+        </div>
+        
+        <div class="card p-8 explorer-bg">
+          <div class="text-4xl mb-4">🌱</div>
+          <h3 class="text-xl font-bold mb-3" style="color: #79c0ff;">Sustainability Loop</h3>
+          <p class="text-gray-300 text-sm mb-4">
+            Donate old gear for bonus rewards. Contoso carbon-offsets every redemption. Mission-driven members feel good about engagement.
+          </p>
+          <p class="text-xs text-gray-400">All tiers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">Success Targets: 6-Month & 12-Month</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-8">
+          <div class="metric-value">30%</div>
+          <p class="text-gray-400 text-sm mt-2">Redemption rate in 6 months</p>
+          <p class="text-xs text-gray-500 mt-2">↑ from 12% baseline | Target: 40% by 12mo</p>
+        </div>
+        
+        <div class="card p-8">
+          <div class="metric-value">+40</div>
+          <p class="text-gray-400 text-sm mt-2">Program NPS</p>
+          <p class="text-xs text-gray-500 mt-2">↑ from +12 baseline | Loyalty becomes a brand strength</p>
+        </div>
+        
+        <div class="card p-8">
+          <div class="metric-value">50%</div>
+          <p class="text-gray-400 text-sm mt-2">Active member rate</p>
+          <p class="text-xs text-gray-500 mt-2">↑ from 23% baseline | Members stay engaged</p>
+        </div>
+        
+        <div class="card p-8">
+          <div class="metric-value">55%</div>
+          <p class="text-gray-400 text-sm mt-2">Member revenue share</p>
+          <p class="text-xs text-gray-500 mt-2">↑ from 34% baseline | Loyalty drives more value</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">Roadmap to Launch</h2>
+      
+      <div class="max-w-2xl">
+        <div class="timeline-item completed">
+          <div class="font-bold text-white mb-1">Planning & Validation</div>
+          <p class="text-gray-400 text-sm">Jan 15 – Feb 15</p>
+          <p class="text-xs text-gray-500 mt-2">Finance sign-off, partner contracts, fraud rules finalized</p>
+        </div>
+        
+        <div class="timeline-item current">
+          <div class="font-bold text-white mb-1">Beta Build</div>
+          <p class="text-gray-400 text-sm">Feb 20 – Apr 30</p>
+          <p class="text-xs text-gray-500 mt-2">Infrastructure, frontend, migration tools, ops playbook</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="font-bold text-white mb-1">Closed Beta</div>
+          <p class="text-gray-400 text-sm">May 1 – May 31</p>
+          <p class="text-xs text-gray-500 mt-2">5,000 member pilot, feedback loops, metrics validation</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="font-bold text-white mb-1">Full Launch</div>
+          <p class="text-gray-400 text-sm">Jun 1 – Jun 30</p>
+          <p class="text-xs text-gray-500 mt-2">All members migrated, production stability, marketing campaign</p>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="font-bold text-white mb-1">Optimization</div>
+          <p class="text-gray-400 text-sm">Jul – Sep 30</p>
+          <p class="text-xs text-gray-500 mt-2">Tier rebalancing, benefit promotions, CS training</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK & MITIGATION -->
+    <section class="section">
+      <h2 class="text-3xl gradient-text mb-8">Known Risks & Mitigations</h2>
+      
+      <div class="space-y-4">
+        <div class="card p-6 border-l-4" style="border-left-color: #f85149;">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-bold text-white mb-2">Tier thresholds too high</h4>
+              <p class="text-sm text-gray-400">Members can't qualify for Trailblazer</p>
+            </div>
+            <span class="text-xs bg-red-900/30 text-red-300 px-3 py-1 rounded">MEDIUM</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">→ Beta Approach: Start with lower thresholds; monitor 4-week velocity. Be ready to adjust to $300/$1,200 if needed.</p>
+        </div>
+        
+        <div class="card p-6 border-l-4" style="border-left-color: #f85149;">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-bold text-white mb-2">Partner terms change post-launch</h4>
+              <p class="text-sm text-gray-400">AllTrails/NPS renegotiate or exit</p>
+            </div>
+            <span class="text-xs bg-red-900/30 text-red-300 px-3 py-1 rounded">HIGH</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">→ Mitigation: Lock contracts pre-launch; build 20% contingency into roadmap (non-partner fallbacks ready).</p>
+        </div>
+        
+        <div class="card p-6 border-l-4" style="border-left-color: #d29922;">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-bold text-white mb-2">Referral fraud</h4>
+              <p class="text-sm text-gray-400">Members game the system with fake referrals</p>
+            </div>
+            <span class="text-xs bg-yellow-900/30 text-yellow-300 px-3 py-1 rounded">MEDIUM</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">→ Pre-launch: ML model for pattern detection. Post-launch: manual review team for high-value invites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section text-center py-12">
+      <h2 class="text-3xl font-bold mb-4 text-white">Ready to Transform Loyalty?</h2>
+      <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+        Trail Rewards is designed to move beyond transactional point-hoarding into experiential engagement that members actually care about. The beta is ready for approval.
+      </p>
+      
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <button class="btn-primary">View Full Spec</button>
+        <button class="px-8 py-3 border border-gray-500 rounded-lg hover:border-gray-300 transition">
+          Download Deck
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <p class="font-semibold mb-2">Product Specs</p>
+          <p class="text-xs">specs/loyalty-program-v2.md</p>
+        </div>
+        <div>
+          <p class="font-semibold mb-2">Last Updated</p>
+          <p class="text-xs">February 4, 2026</p>
+        </div>
+        <div>
+          <p class="font-semibold mb-2">Status</p>
+          <p class="text-xs">In Review (awaiting Finance sign-off)</p>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+        <p>Trail Rewards Explainer | Built for executive stakeholder review</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

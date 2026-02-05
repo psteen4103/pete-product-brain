@@ -1,0 +1,353 @@
+respondent_id,survey_date,age,location,customer_tenure,membership_tier,purchase_frequency,avg_order_value,categories_purchased,channel_preference,nps_score,checkout_satisfaction,search_satisfaction,returns_satisfaction,improvement_suggestion,favorite_feature
+a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d,2025-10-03,34,CO,6,Gold,12,287,camping|hiking|apparel,desktop,9,5,4,5,,gear reviews
+b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e,2025-10-05,28,CA,2,Bronze,5,142,hiking|apparel|footwear,mobile,7,3,4,4,mobile app crashes sometimes,easy returns
+c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f,2025-10-07,45,WA,8,Platinum,18,412,camping|climbing|water-sports|apparel,desktop,10,5,5,5,,price matching
+d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a,2025-10-08,22,OR,1,None,3,89,hiking|apparel,mobile,6,2,3,4,faster checkout on mobile,trail finder
+e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b,2025-10-10,52,UT,9,Platinum,15,356,camping|hiking|climbing,app,9,4,5,5,,expert advice chat
+f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c,2025-10-11,31,CO,4,Silver,8,198,water-sports|apparel|footwear,desktop,8,4,4,4,more eco-friendly products,gear reviews
+a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d,2025-10-12,26,CA,1,Bronze,4,121,hiking|footwear,mobile,5,2,3,3,better size guides,easy returns
+b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e,2025-10-14,39,WA,5,Gold,10,245,camping|hiking|apparel,desktop,8,5,4,4,,trail finder
+c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f,2025-10-15,67,MT,10,Platinum,14,389,camping|hiking,in-store,10,5,4,5,,in-store pickup
+d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a,2025-10-16,24,TX,0,None,2,76,apparel|footwear,mobile,4,2,3,3,wish the app was faster,price alerts
+e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b,2025-10-17,41,CO,7,Gold,11,267,camping|climbing|apparel,app,9,4,5,4,,gear comparison tool
+f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c,2025-10-18,33,AZ,3,Silver,6,156,hiking|water-sports|footwear,desktop,7,4,4,4,faster shipping options,easy returns
+a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d,2025-10-19,29,CA,2,Bronze,5,134,hiking|apparel,mobile,6,3,3,4,mobile checkout is clunky,trail finder
+b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e,2025-10-20,55,WA,9,Platinum,16,398,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f,2025-10-21,47,OR,6,Gold,9,234,camping|hiking,in-store,8,5,4,5,,in-store experts
+d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a,2025-10-22,21,CO,0,None,2,68,apparel|footwear,mobile,5,2,3,3,more sustainable brands please,sustainability info
+e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b,2025-10-23,36,UT,4,Silver,7,189,climbing|apparel|footwear,desktop,8,4,4,4,,gear reviews
+f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c,2025-10-24,62,ID,8,Gold,12,312,camping|hiking,app,9,4,4,5,,loyalty rewards
+a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d,2025-10-25,27,CA,1,Bronze,3,98,hiking|water-sports,mobile,6,2,4,3,app crashes on checkout,trail finder
+b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e,2025-10-27,44,CO,7,Platinum,14,345,camping|hiking|climbing|apparel,desktop,9,5,5,5,,price matching
+c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f,2025-10-28,38,WA,5,Gold,9,223,camping|water-sports|apparel,desktop,8,4,4,4,would love carbon footprint info,gear reviews
+d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a,2025-10-29,23,OR,1,None,3,87,hiking|apparel,mobile,5,2,3,4,mobile site needs work,easy returns
+e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b,2025-10-30,51,NV,6,Gold,10,256,camping|hiking|footwear,in-store,9,5,4,5,,in-store pickup
+f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c,2025-10-31,30,CA,3,Silver,6,167,hiking|climbing|apparel,app,7,4,4,4,,trail finder
+a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d,2025-11-01,42,CO,8,Platinum,15,378,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e,2025-11-02,25,TX,1,Bronze,4,112,apparel|footwear,mobile,6,3,3,3,better mobile experience,price alerts
+c7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f,2025-11-03,58,WA,9,Platinum,13,367,camping|hiking|water-sports,desktop,9,5,4,5,,gear comparison tool
+d8e9f0a1-b2c3-4d4e-5f6a-7b8c9d0e1f2a,2025-11-04,35,UT,4,Silver,7,178,climbing|apparel|footwear,desktop,8,4,4,4,,gear reviews
+e9f0a1b2-c3d4-4e5f-6a7b-8c9d0e1f2a3b,2025-11-05,19,CA,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want more eco product filters,sustainability info
+f0a1b2c3-d4e5-4f6a-7b8c-9d0e1f2a3b4c,2025-11-06,48,CO,7,Gold,11,289,camping|hiking|climbing,app,9,4,5,4,,loyalty rewards
+a1b2c3d4-f5e6-4a7b-8c9d-1e2f3a4b5c6d,2025-11-07,32,OR,3,Silver,6,154,hiking|water-sports|apparel,desktop,7,4,4,4,wish returns were free,easy returns
+b2c3d4e5-a6f7-4b8c-9d0e-2f3a4b5c6d7e,2025-11-08,64,MT,10,Platinum,17,423,camping|hiking|climbing,in-store,10,5,5,5,,in-store experts
+c3d4e5f6-b7a8-4c9d-0e1f-3a4b5c6d7e8f,2025-11-09,28,CA,2,Bronze,4,128,hiking|apparel,mobile,6,2,3,4,checkout times out on mobile,trail finder
+d4e5f6a7-c8b9-4d0e-1f2a-4b5c6d7e8f9a,2025-11-10,46,WA,6,Gold,10,267,camping|hiking|water-sports,desktop,9,5,4,4,,price matching
+e5f6a7b8-d9c0-4e1f-2a3b-5c6d7e8f9a0b,2025-11-11,37,CO,5,Gold,8,213,camping|climbing|apparel,app,8,4,4,4,,gear reviews
+f6a7b8c9-e0d1-4f2a-3b4c-6d7e8f9a0b1c,2025-11-12,24,AZ,1,None,3,94,hiking|footwear,mobile,5,2,3,3,app is slow,price alerts
+a7b8c9d0-f1e2-4a3b-4c5d-7e8f9a0b1c2d,2025-11-13,53,UT,8,Platinum,14,356,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+b8c9d0e1-a2f3-4b4c-5d6e-8f9a0b1c2d3e,2025-11-14,40,CO,6,Gold,9,234,camping|hiking|apparel,desktop,8,4,4,5,,gear comparison tool
+c9d0e1f2-b3a4-4c5d-6e7f-9a0b1c2d3e4f,2025-11-15,22,CA,0,None,2,79,apparel|footwear,mobile,5,2,3,3,more recycled material options,sustainability info
+d0e1f2a3-c4b5-4d6e-7f8a-0b1c2d3e4f5a,2025-11-16,49,WA,7,Platinum,12,298,camping|hiking|water-sports,app,9,4,4,5,,loyalty rewards
+e1f2a3b4-d5c6-4e7f-8a9b-1c2d3e4f5a6b,2025-11-17,34,OR,4,Silver,7,187,hiking|climbing|apparel,desktop,8,4,4,4,,trail finder
+f2a3b4c5-e6d7-4f8a-9b0c-2d3e4f5a6b7c,2025-11-18,26,TX,1,Bronze,4,118,hiking|apparel|footwear,mobile,6,3,3,4,faster mobile checkout please,easy returns
+a3b4c5d6-f7e8-4a9b-0c1d-3e4f5a6b7c8d,2025-11-19,61,ID,9,Platinum,15,387,camping|hiking|climbing,in-store,10,5,5,5,,in-store pickup
+b4c5d6e7-a8f9-4b0c-1d2e-4f5a6b7c8d9e,2025-11-20,31,CO,3,Silver,6,162,camping|hiking|apparel,desktop,7,4,4,4,better size recommendations,gear reviews
+c5d6e7f8-b9a0-4c1d-2e3f-5a6b7c8d9e0f,2025-11-21,43,CA,6,Gold,10,245,camping|hiking|water-sports|apparel,app,9,4,5,4,,price matching
+d6e7f8a9-c0b1-4d2e-3f4a-6b7c8d9e0f1a,2025-11-22,20,WA,0,None,2,67,apparel|footwear,mobile,4,2,3,3,wish there were more vegan options,sustainability info
+e7f8a9b0-d1c2-4e3f-4a5b-7c8d9e0f1a2b,2025-11-23,56,UT,8,Platinum,13,334,camping|hiking|climbing,desktop,9,5,4,5,,expert advice chat
+f8a9b0c1-e2d3-4f4a-5b6c-8d9e0f1a2b3c,2025-11-24,38,CO,5,Gold,9,223,camping|climbing|apparel|footwear,desktop,8,4,4,4,,gear reviews
+a9b0c1d2-f3e4-4a5b-6c7d-9e0f1a2b3c4d,2025-11-25,29,OR,2,Bronze,5,137,hiking|water-sports,mobile,6,2,4,4,mobile payment options limited,trail finder
+b0c1d2e3-a4f5-4b6c-7d8e-0f1a2b3c4d5e,2025-11-26,66,NV,10,Platinum,16,412,camping|hiking|water-sports,in-store,10,5,5,5,,in-store experts
+c1d2e3f4-b5a6-4c7d-8e9f-1a2b3c4d5e6f,2025-11-27,33,CA,3,Silver,6,156,hiking|climbing|apparel,desktop,7,4,4,4,,gear comparison tool
+d2e3f4a5-c6b7-4d8e-9f0a-2b3c4d5e6f7a,2025-11-28,45,WA,7,Gold,11,278,camping|hiking|climbing|apparel,app,9,4,5,5,,loyalty rewards
+e3f4a5b6-d7c8-4e9f-0a1b-3c4d5e6f7a8b,2025-11-29,23,CO,1,None,3,86,hiking|apparel,mobile,5,2,3,3,checkout keeps freezing,easy returns
+f4a5b6c7-e8d9-4f0a-1b2c-4d5e6f7a8b9c,2025-11-30,50,MT,6,Gold,10,256,camping|hiking|footwear,desktop,8,5,4,4,,price matching
+a5b6c7d8-f9e0-4a1b-2c3d-5e6f7a8b9c0d,2025-12-01,35,UT,4,Silver,7,189,camping|climbing|water-sports,desktop,8,4,4,4,more rental gear options,gear reviews
+b6c7d8e9-a0f1-4b2c-3d4e-6f7a8b9c0d1e,2025-12-02,27,CA,1,Bronze,4,123,hiking|apparel|footwear,mobile,6,3,3,4,better mobile filters,trail finder
+c7d8e9f0-b1a2-4c3d-4e5f-7a8b9c0d1e2f,2025-12-03,59,CO,9,Platinum,15,389,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+d8e9f0a1-c2b3-4d4e-5f6a-8b9c0d1e2f3a,2025-12-04,41,WA,5,Gold,8,212,camping|hiking|apparel,app,8,4,4,4,,gear comparison tool
+e9f0a1b2-d3c4-4e5f-6a7b-9c0d1e2f3a4b,2025-12-05,21,OR,0,None,2,74,apparel|footwear,mobile,5,2,3,3,need better sustainability scores,sustainability info
+f0a1b2c3-e4d5-4f6a-7b8c-0d1e2f3a4b5c,2025-12-06,54,ID,8,Platinum,14,367,camping|hiking|climbing,in-store,9,5,4,5,,in-store pickup
+a1b2c3d4-a5b6-4c7d-8e9f-1e2f3a4b5c6d,2025-12-07,36,CO,4,Silver,7,178,hiking|climbing|apparel|footwear,desktop,8,4,4,4,,price alerts
+b2c3d4e5-b6c7-4d8e-9f0a-2f3a4b5c6d7e,2025-12-08,30,CA,3,Silver,6,163,hiking|water-sports|apparel,mobile,6,3,4,4,mobile site hard to navigate,easy returns
+c3d4e5f6-c7d8-4e9f-0a1b-3a4b5c6d7e8f,2025-12-09,47,WA,7,Gold,11,289,camping|hiking|water-sports,desktop,9,5,4,5,,loyalty rewards
+d4e5f6a7-d8e9-4f0a-1b2c-4b5c6d7e8f9a,2025-12-10,25,UT,1,Bronze,4,117,climbing|apparel,mobile,6,2,3,4,checkout loading too slow,trail finder
+e5f6a7b8-e9f0-4a1b-2c3d-5c6d7e8f9a0b,2025-12-11,63,MT,10,Platinum,16,401,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+f6a7b8c9-f0a1-4b2c-3d4e-6d7e8f9a0b1c,2025-12-12,39,CO,5,Gold,9,234,camping|hiking|apparel,app,8,4,5,4,,gear reviews
+a7b8c9d0-a1b2-4c3d-4e5f-7e8f9a0b1c2d,2025-12-13,28,AZ,2,Bronze,5,142,hiking|apparel|footwear,mobile,7,3,3,4,would love express checkout,price alerts
+b8c9d0e1-b2c3-4d4e-5f6a-8f9a0b1c2d3e,2025-12-14,52,WA,8,Platinum,13,356,camping|hiking|climbing,in-store,9,5,5,5,,in-store experts
+c9d0e1f2-c3d4-4e5f-6a7b-9a0b1c2d3e4f,2025-12-15,34,OR,4,Silver,7,187,camping|hiking|water-sports,desktop,8,4,4,4,,gear comparison tool
+d0e1f2a3-d4e5-4f6a-7b8c-0b1c2d3e4f5a,2025-12-16,19,CA,0,None,2,69,apparel|footwear,mobile,4,2,3,3,want carbon neutral shipping,sustainability info
+e1f2a3b4-e5f6-4a7b-8c9d-1c2d3e4f5a6b,2025-12-17,46,CO,6,Gold,10,267,camping|hiking|climbing|apparel,desktop,9,4,4,5,,price matching
+f2a3b4c5-f6a7-4b8c-9d0e-2d3e4f5a6b7c,2025-12-18,32,UT,3,Silver,6,156,climbing|apparel|footwear,app,7,4,4,4,,easy returns
+a3b4c5d6-a7b8-4c9d-0e1f-3e4f5a6b7c8d,2025-12-19,57,WA,9,Platinum,14,378,camping|hiking|water-sports,desktop,10,5,5,5,,loyalty rewards
+b4c5d6e7-b8c9-4d0e-1f2a-4f5a6b7c8d9e,2025-12-20,26,TX,1,None,3,93,hiking|apparel,mobile,5,2,3,3,mobile app needs redesign,trail finder
+c5d6e7f8-c9d0-4e1f-2a3b-5a6b7c8d9e0f,2025-12-21,44,CO,7,Gold,11,289,camping|hiking|climbing,desktop,9,5,4,4,,gear reviews
+d6e7f8a9-d0e1-4f2a-3b4c-6b7c8d9e0f1a,2025-12-22,37,CA,4,Silver,8,198,hiking|water-sports|apparel|footwear,mobile,7,3,4,4,improve mobile search,gear comparison tool
+e7f8a9b0-e1f2-4a3b-4c5d-7c8d9e0f1a2b,2025-12-23,68,OR,10,Platinum,15,387,camping|hiking,in-store,10,5,4,5,,in-store pickup
+f8a9b0c1-f2a3-4b4c-5d6e-8d9e0f1a2b3c,2025-12-24,29,WA,2,Bronze,5,134,hiking|climbing|apparel,desktop,7,4,4,4,,price alerts
+a9b0c1d2-a3b4-4c5d-6e7f-9e0f1a2b3c4d,2025-12-25,42,CO,6,Gold,10,256,camping|hiking|apparel,app,8,4,5,4,,easy returns
+b0c1d2e3-b4c5-4d6e-7f8a-0f1a2b3c4d5e,2025-12-26,23,UT,1,None,3,87,climbing|apparel|footwear,mobile,5,2,3,3,checkout errors on mobile,sustainability info
+c1d2e3f4-c5d6-4e7f-8a9b-1a2b3c4d5e6f,2025-12-27,55,MT,8,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,9,5,5,5,,expert advice chat
+d2e3f4a5-d6e7-4f8a-9b0c-2b3c4d5e6f7a,2025-12-28,33,CA,3,Silver,6,163,hiking|apparel|footwear,desktop,7,4,4,4,wish filters worked better,gear reviews
+e3f4a5b6-e7f8-4a9b-0c1d-3c4d5e6f7a8b,2025-12-29,48,WA,7,Gold,12,298,camping|hiking|water-sports,app,9,4,4,5,,loyalty rewards
+f4a5b6c7-f8a9-4b0c-1d2e-4d5e6f7a8b9c,2025-12-30,31,CO,4,Silver,7,187,camping|climbing|apparel,desktop,8,4,4,4,,trail finder
+a5b6c7d8-a9b0-4c1d-2e3f-5e6f7a8b9c0d,2025-12-31,60,ID,9,Platinum,16,412,camping|hiking|climbing,in-store,10,5,5,5,,in-store experts
+b6c7d8e9-b0c1-4d2e-3f4a-6f7a8b9c0d1e,2025-10-02,40,OR,5,Gold,9,234,hiking|water-sports|apparel,desktop,8,4,4,4,,price matching
+c7d8e9f0-c1d2-4e3f-4a5b-7a8b9c0d1e2f,2025-10-04,24,CA,0,None,2,78,apparel|footwear,mobile,5,2,3,3,better eco certifications,sustainability info
+d8e9f0a1-d2e3-4f4a-5b6c-8b9c0d1e2f3a,2025-10-06,51,CO,8,Platinum,13,345,camping|hiking|climbing,desktop,9,5,5,5,,gear comparison tool
+e9f0a1b2-e3f4-4a5b-6c7d-9c0d1e2f3a4b,2025-10-09,35,WA,4,Silver,7,178,camping|hiking|apparel|footwear,app,8,4,4,4,,easy returns
+f0a1b2c3-f4a5-4b6c-7d8e-0d1e2f3a4b5c,2025-10-13,27,UT,2,Bronze,5,137,climbing|apparel,mobile,6,3,3,4,app keeps logging me out,trail finder
+01a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c,2025-10-26,43,MT,6,Gold,10,267,camping|hiking|climbing,desktop,9,4,4,5,,loyalty rewards
+12b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d,2025-11-28,38,CO,5,Gold,9,223,camping|hiking|water-sports,app,8,4,5,4,,gear reviews
+23c4d5e6-f7a8-4b9c-0d1e-2f3a4b5c6d7e,2025-11-30,22,CA,1,None,3,89,hiking|apparel|footwear,mobile,5,2,3,3,mobile payment failed twice,price alerts
+34d5e6f7-a8b9-4c0d-1e2f-3a4b5c6d7e8f,2025-10-01,65,WA,10,Platinum,17,434,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store pickup
+45e6f7a8-b9c0-4d1e-2f3a-4b5c6d7e8f9a,2025-10-03,30,OR,3,Silver,6,156,hiking|climbing|apparel,desktop,7,4,4,4,faster shipping to rural areas,gear comparison tool
+56f7a8b9-c0d1-4e2f-3a4b-5c6d7e8f9a0b,2025-10-05,46,CO,7,Gold,11,287,camping|hiking|apparel|footwear,desktop,9,5,4,4,,price matching
+67a8b9c0-d1e2-4f3a-4b5c-6d7e8f9a0b1c,2025-10-07,25,UT,1,Bronze,4,118,climbing|water-sports,mobile,6,2,3,4,mobile site is frustrating,easy returns
+78b9c0d1-e2f3-4a4b-5c6d-7e8f9a0b1c2d,2025-10-09,54,CA,8,Platinum,14,367,camping|hiking|climbing,app,9,4,5,5,,expert advice chat
+89c0d1e2-f3a4-4b5c-6d7e-8f9a0b1c2d3e,2025-10-11,36,WA,4,Silver,7,189,camping|hiking|water-sports,desktop,8,4,4,4,,loyalty rewards
+90d1e2f3-a4b5-4c6d-7e8f-9a0b1c2d3e4f,2025-10-13,20,TX,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want more plant-based materials,sustainability info
+a1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a,2025-10-15,49,CO,6,Gold,10,256,camping|hiking|climbing|apparel,desktop,9,4,4,5,,gear reviews
+b2f3a4b5-c6d7-4e8f-9a0b-1c2d3e4f5a6b,2025-10-17,32,OR,3,Silver,6,163,hiking|apparel|footwear,mobile,6,3,4,4,checkout button hard to tap,trail finder
+c3a4b5c6-d7e8-4f9a-0b1c-2d3e4f5a6b7c,2025-10-19,58,MT,9,Platinum,15,398,camping|hiking|climbing,in-store,10,5,5,5,,in-store experts
+d4b5c6d7-e8f9-4a0b-1c2d-3e4f5a6b7c8d,2025-10-21,41,WA,5,Gold,9,234,camping|hiking|water-sports,desktop,8,4,4,4,,price matching
+e5c6d7e8-f9a0-4b1c-2d3e-4f5a6b7c8d9e,2025-10-23,28,CA,2,Bronze,5,142,hiking|climbing|apparel,app,7,4,3,4,search results not relevant,gear comparison tool
+f6d7e8f9-a0b1-4c2d-3e4f-5a6b7c8d9e0f,2025-10-25,63,CO,10,Platinum,16,412,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+a7e8f9a0-b1c2-4d3e-4f5a-6b7c8d9e0f1a,2025-10-27,34,UT,4,Silver,7,178,climbing|apparel|footwear,desktop,8,4,4,4,,easy returns
+b8f9a0b1-c2d3-4e4f-5a6b-7c8d9e0f1a2b,2025-10-29,23,OR,0,None,3,86,hiking|apparel,mobile,5,2,3,3,add apple pay please,price alerts
+c9a0b1c2-d3e4-4f5a-6b7c-8d9e0f1a2b3c,2025-10-31,47,WA,7,Gold,11,289,camping|hiking|apparel,app,9,4,5,4,,loyalty rewards
+d0b1c2d3-e4f5-4a6b-7c8d-9e0f1a2b3c4d,2025-11-02,39,CO,5,Gold,8,213,camping|climbing|water-sports,desktop,8,4,4,4,,gear reviews
+e1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e,2025-11-04,26,CA,1,Bronze,4,123,hiking|apparel|footwear,mobile,6,3,3,4,app crashes during payment,trail finder
+f2d3e4f5-a6b7-4c8d-9e0f-1a2b3c4d5e6f,2025-11-06,56,ID,8,Platinum,14,356,camping|hiking|climbing,in-store,9,5,4,5,,in-store pickup
+a3e4f5a6-b7c8-4d9e-0f1a-2b3c4d5e6f7a,2025-11-08,31,UT,3,Silver,6,154,climbing|apparel,desktop,7,4,4,4,broader product sizing,gear comparison tool
+b4f5a6b7-c8d9-4e0f-1a2b-3c4d5e6f7a8b,2025-11-10,44,WA,6,Gold,10,267,camping|hiking|water-sports|apparel,app,9,4,5,5,,price matching
+c5a6b7c8-d9e0-4f1a-2b3c-4d5e6f7a8b9c,2025-11-12,21,TX,0,None,2,68,apparel|footwear,mobile,4,2,3,3,more secondhand options,sustainability info
+d6b7c8d9-e0f1-4a2b-3c4d-5e6f7a8b9c0d,2025-11-14,52,CO,8,Platinum,13,334,camping|hiking|climbing,desktop,9,5,5,5,,expert advice chat
+e7c8d9e0-f1a2-4b3c-4d5e-6f7a8b9c0d1e,2025-11-16,37,OR,4,Silver,7,189,hiking|climbing|apparel|footwear,desktop,8,4,4,4,,easy returns
+f8d9e0f1-a2b3-4c4d-5e6f-7a8b9c0d1e2f,2025-11-18,29,CA,2,Bronze,5,137,hiking|water-sports,mobile,6,2,4,4,mobile checkout confusing,loyalty rewards
+a9e0f1a2-b3c4-4d5e-6f7a-8b9c0d1e2f3a,2025-11-20,66,MT,10,Platinum,17,423,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+b0f1a2b3-c4d5-4e6f-7a8b-9c0d1e2f3a4b,2025-11-22,33,WA,3,Silver,6,162,camping|hiking|apparel,desktop,7,4,4,4,,gear reviews
+c1a2b3c4-d5e6-4f7a-8b9c-0d1e2f3a4b5c,2025-11-24,45,CO,7,Gold,11,278,camping|hiking|climbing|apparel,app,9,4,4,5,,trail finder
+d2b3c4d5-e6f7-4a8b-9c0d-1e2f3a4b5c6d,2025-11-26,24,UT,1,None,3,94,climbing|apparel,mobile,5,2,3,3,mobile site crashes,price alerts
+e3c4d5e6-f7a8-4b9c-0d1e-2f3a4b5c6d7e,2025-10-02,59,WA,9,Platinum,15,389,camping|hiking|water-sports,desktop,10,5,5,5,,gear comparison tool
+f4d5e6f7-a8b9-4c0d-1e2f-3a4b5c6d7e8f,2025-10-04,35,CA,4,Silver,7,178,hiking|climbing|apparel|footwear,desktop,8,4,4,4,,price matching
+a5e6f7a8-b9c0-4d1e-2f3a-4b5c6d7e8f9a,2025-10-06,27,OR,1,Bronze,4,117,hiking|apparel,mobile,6,3,3,4,better mobile UX needed,easy returns
+b6f7a8b9-c0d1-4e2f-3a4b-5c6d7e8f9a0b,2025-10-08,50,CO,6,Gold,10,256,camping|hiking|apparel,in-store,9,5,4,4,,loyalty rewards
+c7a8b9c0-d1e2-4f3a-4b5c-6d7e8f9a0b1c,2025-10-10,40,MT,5,Gold,8,212,camping|climbing|water-sports,desktop,8,4,5,4,,gear reviews
+d8b9c0d1-e2f3-4a4b-5c6d-7e8f9a0b1c2d,2025-10-12,22,WA,0,None,2,74,apparel|footwear,mobile,5,2,3,3,more biodegradable packaging,sustainability info
+e9c0d1e2-f3a4-4b5c-6d7e-8f9a0b1c2d3e,2025-10-14,53,UT,8,Platinum,14,367,camping|hiking|climbing,app,9,4,5,5,,expert advice chat
+f0d1e2f3-a4b5-4c6d-7e8f-9a0b1c2d3e4f,2025-10-16,36,CA,4,Silver,7,187,hiking|water-sports|apparel,desktop,8,4,4,4,,trail finder
+a1e2f3a4-c5d6-4e7f-8a9b-0b1c2d3e4f5a,2025-10-18,30,CO,3,Silver,6,163,camping|hiking|apparel|footwear,mobile,6,3,4,4,wish checkout was simpler,price alerts
+b2f3a4b5-d6e7-4f8a-9b0c-1c2d3e4f5a6b,2025-10-20,62,OR,9,Platinum,15,387,camping|hiking|climbing,in-store,10,5,5,5,,in-store pickup
+c3a4b5c6-e7f8-4a9b-0c1d-2d3e4f5a6b7c,2025-10-22,42,WA,6,Gold,10,267,camping|hiking|water-sports,desktop,9,4,4,5,,gear comparison tool
+d4b5c6d7-f8a9-4b0c-1d2e-3e4f5a6b7c8d,2025-10-24,25,TX,1,None,3,89,hiking|apparel|footwear,mobile,5,2,3,3,guest checkout needed,easy returns
+e5c6d7e8-a9b0-4c1d-2e3f-4f5a6b7c8d9e,2025-10-26,48,CO,7,Gold,11,289,camping|hiking|climbing|apparel,app,9,4,5,4,,loyalty rewards
+f6d7e8f9-b0c1-4d2e-3f4a-5a6b7c8d9e0f,2025-10-28,38,CA,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,4,4,,price matching
+a7e8f9a0-c1d2-4e3f-4a5b-6b7c8d9e0f1a,2025-10-30,19,UT,0,None,2,67,apparel|footwear,mobile,4,2,3,3,want repair services,sustainability info
+b8f9a0b1-d2e3-4f4a-5b6c-7c8d9e0f1a2b,2025-11-01,55,MT,8,Platinum,13,345,camping|hiking|climbing,desktop,9,5,4,5,,expert advice chat
+c9a0b1c2-e3f4-4a5b-6c7d-8d9e0f1a2b3c,2025-11-03,34,WA,4,Silver,7,178,hiking|climbing|water-sports,app,8,4,4,4,,gear reviews
+d0b1c2d3-f4a5-4b6c-7d8e-9e0f1a2b3c4d,2025-11-05,28,OR,2,Bronze,5,142,hiking|apparel|footwear,mobile,7,3,3,4,improve mobile navigation,trail finder
+e1c2d3e4-a5b6-4c7d-8e9f-0f1a2b3c4d5e,2025-11-07,64,CO,10,Platinum,16,412,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+f2d3e4f5-b6c7-4d8e-9f0a-1a2b3c4d5e6f,2025-11-09,39,CA,5,Gold,8,213,camping|hiking|apparel,desktop,8,4,4,4,,price alerts
+a3e4f5a6-c7d8-4e9f-0a1b-2b3c4d5e6f7a,2025-11-11,26,UT,1,Bronze,4,118,climbing|apparel,mobile,6,2,3,4,faster load times please,easy returns
+b4f5a6b7-d8e9-4f0a-1b2c-3c4d5e6f7a8b,2025-11-13,57,WA,9,Platinum,15,389,camping|hiking|water-sports,desktop,10,5,5,5,,gear comparison tool
+c5a6b7c8-e9f0-4a1b-2c3d-4d5e6f7a8b9c,2025-11-15,32,CO,3,Silver,6,156,camping|hiking|apparel|footwear,desktop,7,4,4,4,,loyalty rewards
+d6b7c8d9-f0a1-4b2c-3d4e-5e6f7a8b9c0d,2025-11-17,46,OR,7,Gold,11,278,camping|hiking|climbing,app,9,4,4,5,,trail finder
+e7c8d9e0-a1b2-4c3d-4e5f-6f7a8b9c0d1e,2025-11-19,23,CA,0,None,3,87,hiking|apparel,mobile,5,2,3,3,add trade-in program,sustainability info
+f8d9e0f1-b2c3-4d4e-5f6a-7a8b9c0d1e2f,2025-11-21,51,MT,6,Gold,10,256,camping|hiking|climbing,in-store,8,5,4,4,,in-store pickup
+a9e0f1a2-c3d4-4e5f-6a7b-8b9c0d1e2f3a,2025-11-23,35,WA,4,Silver,7,189,hiking|water-sports|apparel,desktop,8,4,4,4,,gear reviews
+b0f1a2b3-d4e5-4f6a-7b8c-9c0d1e2f3a4b,2025-11-25,29,TX,2,Bronze,5,134,hiking|apparel|footwear,mobile,6,3,3,4,mobile app unresponsive,price matching
+c1a2b3c4-e5f6-4a7b-8c9d-0d1e2f3a4b5c,2025-11-27,60,CO,9,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+d2b3c4d5-f6a7-4b8c-9d0e-1e2f3a4b5c6d,2025-11-29,41,CA,5,Gold,9,234,camping|hiking|apparel,app,8,4,5,4,,easy returns
+e3c4d5e6-a7b8-4c9d-0e1f-2f3a4b5c6d7e,2025-12-01,24,OR,1,None,3,93,hiking|apparel|footwear,mobile,5,2,3,3,checkout keeps timing out,trail finder
+f4d5e6f7-b8c9-4d0e-1f2a-3a4b5c6d7e8f,2025-12-03,54,WA,8,Platinum,13,356,camping|hiking|climbing,desktop,9,5,4,5,,loyalty rewards
+a5e6f7a8-c9d0-4e1f-2a3b-4b5c6d7e8f9a,2025-12-05,37,UT,4,Silver,7,178,climbing|water-sports|apparel,desktop,8,4,4,4,,gear comparison tool
+b6f7a8b9-d0e1-4f2a-3b4c-5c6d7e8f9a0b,2025-12-07,27,CO,1,Bronze,4,123,hiking|apparel|footwear,mobile,6,3,3,4,need better mobile filters,price alerts
+c7a8b9c0-e1f2-4a3b-4c5d-6d7e8f9a0b1c,2025-12-09,67,MT,10,Platinum,17,434,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+d8b9c0d1-f2a3-4b4c-5d6e-7e8f9a0b1c2d,2025-12-11,43,CA,6,Gold,10,267,camping|hiking|water-sports,desktop,9,4,4,5,,trail finder
+e9c0d1e2-a3b4-4c5d-6e7f-8f9a0b1c2d3e,2025-12-13,30,WA,3,Silver,6,163,hiking|climbing|apparel,app,7,4,4,4,,gear reviews
+f0d1e2f3-b4c5-4d6e-7f8a-9a0b1c2d3e4f,2025-12-15,21,UT,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want ethical sourcing info,sustainability info
+a1e2f3a4-d5e6-4e7f-8a9b-0b1c2d3e4f5a,2025-12-17,49,CO,7,Gold,11,289,camping|hiking|climbing|apparel,desktop,9,5,4,4,,price matching
+b2f3a4b5-e6f7-4f8a-9b0c-1c2d3e4f5a6b,2025-12-19,36,OR,4,Silver,7,187,hiking|water-sports|apparel|footwear,mobile,7,3,4,4,simplify mobile checkout,easy returns
+c3a4b5c6-f7a8-4a9b-0c1d-2d3e4f5a6b7c,2025-12-21,58,WA,9,Platinum,15,398,camping|hiking|climbing,in-store,10,5,5,5,,loyalty rewards
+d4b5c6d7-a8b9-4b0c-1d2e-3e4f5a6b7c8d,2025-12-23,33,CA,3,Silver,6,156,camping|hiking|apparel,desktop,7,4,4,4,,gear comparison tool
+e5c6d7e8-b9c0-4c1d-2e3f-4f5a6b7c8d9e,2025-12-25,47,UT,7,Gold,12,298,camping|hiking|climbing|water-sports,app,9,4,5,5,,expert advice chat
+f6d7e8f9-c0d1-4d2e-3f4a-5a6b7c8d9e0f,2025-12-27,25,TX,1,None,3,86,hiking|apparel,mobile,5,2,3,3,better size charts,trail finder
+a7e8f9a0-d1e2-4e3f-4a5b-6b7c8d9e0f1a,2025-12-29,52,CO,8,Platinum,14,367,camping|hiking|climbing,desktop,9,5,4,5,,in-store pickup
+b8f9a0b1-e2f3-4f4a-5b6c-7c8d9e0f1a2b,2025-12-31,38,WA,5,Gold,9,234,camping|hiking|water-sports,desktop,8,4,4,4,,price alerts
+c9a0b1c2-f3a4-4a5b-6c7d-8d9e0f1a2b3c,2025-10-01,69,ID,10,Platinum,15,387,camping|hiking,in-store,10,5,5,5,,in-store experts
+d0b1c2d3-a4b5-4b6c-7d8e-9e0f1a2b3c4d,2025-10-03,31,CA,3,Silver,6,162,hiking|climbing|apparel|footwear,desktop,7,4,4,4,,gear reviews
+e1c2d3e4-b5c6-4c7d-8e9f-0f1a2b3c4d5e,2025-10-05,44,CO,6,Gold,10,267,camping|hiking|apparel,app,9,4,5,4,,loyalty rewards
+f2d3e4f5-c6d7-4d8e-9f0a-1a2b3c4d5e6f,2025-10-07,26,OR,1,Bronze,4,118,hiking|water-sports,mobile,6,2,3,4,mobile search broken,easy returns
+a3e4f5a6-d7e8-4e9f-0a1b-2b3c4d5e6f7a,2025-10-09,55,WA,8,Platinum,13,345,camping|hiking|climbing,desktop,9,5,5,5,,trail finder
+b4f5a6b7-e8f9-4f0a-1b2c-3c4d5e6f7a8b,2025-10-11,40,UT,5,Gold,9,234,camping|climbing|water-sports|apparel,in-store,8,5,4,4,,gear comparison tool
+c5a6b7c8-f9a0-4a1b-2c3d-4d5e6f7a8b9c,2025-10-13,22,CA,0,None,2,76,apparel|footwear,mobile,5,2,3,3,product carbon footprint labels,sustainability info
+d6b7c8d9-a0b1-4b2c-3d4e-5e6f7a8b9c0d,2025-10-15,48,MT,7,Gold,11,278,camping|hiking|climbing,desktop,9,4,4,5,,price matching
+e7c8d9e0-b1c2-4c3d-4e5f-6f7a8b9c0d1e,2025-10-17,34,CO,4,Silver,7,189,hiking|apparel|footwear,desktop,8,4,4,4,,expert advice chat
+f8d9e0f1-c2d3-4d4e-5f6a-7a8b9c0d1e2f,2025-10-19,28,WA,2,Bronze,5,137,hiking|climbing|apparel,mobile,7,3,3,4,checkout errors on iphone,gear reviews
+a9e0f1a2-d3e4-4e5f-6a7b-8b9c0d1e2f3a,2025-10-21,61,OR,9,Platinum,15,389,camping|hiking|water-sports,in-store,10,5,5,5,,loyalty rewards
+b0f1a2b3-e4f5-4f6a-7b8c-9c0d1e2f3a4b,2025-10-23,37,CA,4,Silver,7,178,camping|hiking|apparel,app,8,4,4,4,,trail finder
+c1a2b3c4-f5a6-4a7b-8c9d-0d1e2f3a4b5c,2025-10-25,23,UT,0,None,3,87,climbing|apparel|footwear,mobile,5,2,3,3,more eco-friendly brands,price alerts
+d2b3c4d5-a6b7-4b8c-9d0e-1e2f3a4b5c6d,2025-10-27,50,CO,6,Gold,10,256,camping|hiking|climbing,desktop,9,5,4,4,,easy returns
+e3c4d5e6-b7c8-4c9d-0e1f-2f3a4b5c6d7e,2025-10-29,41,WA,5,Gold,9,223,camping|hiking|water-sports|apparel,desktop,8,4,5,4,,gear comparison tool
+f4d5e6f7-c8d9-4d0e-1f2a-3a4b5c6d7e8f,2025-10-31,29,TX,2,Bronze,5,142,hiking|apparel,mobile,6,3,3,4,mobile payment issues,in-store pickup
+a5e6f7a8-d9e0-4e1f-2a3b-4b5c6d7e8f9a,2025-11-02,64,MT,10,Platinum,16,412,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+b6f7a8b9-e0f1-4f2a-3b4c-5c6d7e8f9a0b,2025-11-04,35,CA,4,Silver,7,178,hiking|climbing|apparel|footwear,desktop,8,4,4,4,,price matching
+c7a8b9c0-f1a2-4a3b-4c5d-6d7e8f9a0b1c,2025-11-06,27,OR,1,Bronze,4,123,hiking|apparel,mobile,6,2,3,4,app laggy on android,loyalty rewards
+d8b9c0d1-a2b3-4b4c-5d6e-7e8f9a0b1c2d,2025-11-08,53,CO,8,Platinum,14,356,camping|hiking|climbing,app,9,4,5,5,,expert advice chat
+e9c0d1e2-b3c4-4c5d-6e7f-8f9a0b1c2d3e,2025-11-10,39,WA,5,Gold,8,213,camping|hiking|water-sports,desktop,8,4,4,4,,gear reviews
+f0d1e2f3-c4d5-4d6e-7f8a-9a0b1c2d3e4f,2025-11-12,20,UT,0,None,2,68,apparel|footwear,mobile,4,2,3,3,want gear rental options,sustainability info
+a1e2f3a4-e5f6-4e7f-8a9b-0b1c2d3e4f5a,2025-11-14,56,ID,9,Platinum,15,398,camping|hiking|climbing,in-store,9,5,4,5,,trail finder
+b2f3a4b5-f6a7-4f8a-9b0c-1c2d3e4f5a6b,2025-11-16,32,CA,3,Silver,6,156,hiking|water-sports|apparel,desktop,7,4,4,4,,price alerts
+c3a4b5c6-a7b8-4a9b-0c1d-2d3e4f5a6b7c,2025-11-18,46,CO,7,Gold,11,287,camping|hiking|climbing|apparel,app,9,4,4,5,,easy returns
+d4b5c6d7-b8c9-4b0c-1d2e-3e4f5a6b7c8d,2025-11-20,24,WA,1,None,3,94,hiking|apparel|footwear,mobile,5,2,3,3,checkout freezes on samsung,gear comparison tool
+e5c6d7e8-c9d0-4c1d-2e3f-4f5a6b7c8d9e,2025-11-22,59,MT,9,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,loyalty rewards
+f6d7e8f9-d0e1-4d2e-3f4a-5a6b7c8d9e0f,2025-11-24,36,OR,4,Silver,7,189,camping|hiking|apparel|footwear,desktop,8,4,4,4,,in-store pickup
+a7e8f9a0-e1f2-4e3f-4a5b-6b7c8d9e0f1a,2025-11-26,28,CA,2,Bronze,5,134,hiking|climbing|apparel,mobile,7,3,3,4,mobile app slow,trail finder
+b8f9a0b1-f2a3-4f4a-5b6c-7c8d9e0f1a2b,2025-11-28,65,WA,10,Platinum,17,423,camping|hiking|water-sports,in-store,10,5,5,5,,in-store experts
+c9a0b1c2-a3b4-4a5b-6c7d-8d9e0f1a2b3c,2025-11-30,42,UT,6,Gold,10,256,camping|climbing|water-sports|apparel,desktop,9,4,4,5,,expert advice chat
+d0b1c2d3-b4c5-4b6c-7d8e-9e0f1a2b3c4d,2025-12-02,25,TX,1,None,3,89,hiking|apparel,mobile,5,2,3,3,faster mobile site,price matching
+e1c2d3e4-c5d6-4c7d-8e9f-0f1a2b3c4d5e,2025-12-04,51,CO,8,Platinum,13,334,camping|hiking|climbing,app,9,4,5,5,,gear reviews
+f2d3e4f5-d6e7-4d8e-9f0a-1a2b3c4d5e6f,2025-12-06,33,WA,3,Silver,6,162,hiking|water-sports|apparel,desktop,7,4,4,4,,easy returns
+a3e4f5a6-e7f8-4e9f-0a1b-2b3c4d5e6f7a,2025-12-08,47,OR,7,Gold,11,278,camping|hiking|climbing,in-store,9,5,4,4,,loyalty rewards
+b4f5a6b7-f8a9-4f0a-1b2c-3c4d5e6f7a8b,2025-12-10,21,CA,0,None,2,74,apparel|footwear,mobile,4,2,3,3,add sustainability ratings,sustainability info
+c5a6b7c8-a9b0-4a1b-2c3d-4d5e6f7a8b9c,2025-12-12,54,MT,8,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,9,5,4,5,,trail finder
+d6b7c8d9-b0c1-4b2c-3d4e-5e6f7a8b9c0d,2025-12-14,38,UT,5,Gold,9,234,camping|climbing|apparel|footwear,app,8,4,5,4,,gear comparison tool
+e7c8d9e0-c1d2-4c3d-4e5f-6f7a8b9c0d1e,2025-12-16,30,CO,3,Silver,6,163,hiking|apparel|footwear,mobile,6,3,4,4,checkout is clunky on phone,price alerts
+f8d9e0f1-d2e3-4d4e-5f6a-7a8b9c0d1e2f,2025-12-18,68,WA,10,Platinum,16,401,camping|hiking|water-sports,in-store,10,5,5,5,,in-store experts
+a9e0f1a2-e3f4-4e5f-6a7b-8b9c0d1e2f3a,2025-12-20,43,CA,6,Gold,10,267,camping|hiking|climbing,desktop,9,4,4,5,,expert advice chat
+b0f1a2b3-f4a5-4f6a-7b8c-9c0d1e2f3a4b,2025-12-22,26,OR,1,Bronze,4,117,hiking|apparel,mobile,6,2,3,4,wish mobile was faster,easy returns
+c1a2b3c4-a5b6-4a7b-8c9d-0d1e2f3a4b5c,2025-12-24,57,UT,9,Platinum,15,389,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,loyalty rewards
+d2b3c4d5-b6c7-4b8c-9d0e-1e2f3a4b5c6d,2025-12-26,34,WA,4,Silver,7,178,camping|hiking|apparel,app,8,4,4,4,,gear reviews
+e3c4d5e6-c7d8-4c9d-0e1f-2f3a4b5c6d7e,2025-12-28,45,CO,7,Gold,12,298,camping|hiking|climbing|apparel,desktop,9,5,4,4,,trail finder
+f4d5e6f7-d8e9-4d0e-1f2a-3a4b5c6d7e8f,2025-12-30,22,CA,0,None,2,69,apparel|footwear,mobile,5,2,3,3,more planet-friendly options,sustainability info
+a5e6f7a8-e9f0-4e1f-2a3b-4b5c6d7e8f9a,2025-10-02,49,MT,6,Gold,10,256,camping|hiking|climbing,in-store,8,5,4,4,,in-store pickup
+b6f7a8b9-f0a1-4f2a-3b4c-5c6d7e8f9a0b,2025-10-04,37,OR,4,Silver,7,187,hiking|water-sports|apparel|footwear,desktop,8,4,4,4,,price matching
+c7a8b9c0-a1b2-4a3b-4c5d-6d7e8f9a0b1c,2025-10-06,29,WA,2,Bronze,5,137,hiking|climbing|apparel,mobile,7,3,3,4,mobile checkout too slow,gear comparison tool
+d8b9c0d1-b2c3-4b4c-5d6e-7e8f9a0b1c2d,2025-10-08,62,CO,10,Platinum,17,434,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+e9c0d1e2-c3d4-4c5d-6e7f-8f9a0b1c2d3e,2025-10-10,35,UT,4,Silver,7,178,climbing|apparel|footwear,app,8,4,4,4,,easy returns
+f0d1e2f3-d4e5-4d6e-7f8a-9a0b1c2d3e4f,2025-10-12,23,CA,0,None,3,86,hiking|apparel,mobile,5,2,3,3,need better eco filters,sustainability info
+a1e2f3a4-f5a6-4e7f-8a9b-0b1c2d3e4f5a,2025-10-14,52,WA,8,Platinum,14,356,camping|hiking|water-sports,in-store,9,5,4,5,,loyalty rewards
+b2f3a4b5-a6b7-4f8a-9b0c-1c2d3e4f5a6b,2025-10-16,40,CO,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,5,4,,trail finder
+c3a4b5c6-b7c8-4a9b-0c1d-2d3e4f5a6b7c,2025-10-18,27,OR,1,Bronze,4,118,hiking|water-sports,mobile,6,2,3,4,app hangs on checkout,price alerts
+d4b5c6d7-c8d9-4b0c-1d2e-3e4f5a6b7c8d,2025-10-20,55,MT,9,Platinum,15,398,camping|hiking|climbing,desktop,10,5,5,5,,gear reviews
+e5c6d7e8-d9e0-4c1d-2e3f-4f5a6b7c8d9e,2025-10-22,31,WA,3,Silver,6,156,hiking|climbing|apparel|footwear,desktop,7,4,4,4,,in-store pickup
+f6d7e8f9-e0f1-4d2e-3f4a-5a6b7c8d9e0f,2025-10-24,44,UT,6,Gold,10,267,camping|hiking|climbing|apparel,app,9,4,4,5,,gear comparison tool
+a7e8f9a0-f1a2-4e3f-4a5b-6b7c8d9e0f1a,2025-10-26,19,CA,0,None,2,67,apparel|footwear,mobile,4,2,3,3,want climate-positive products,sustainability info
+b8f9a0b1-a2b3-4f4a-5b6c-7c8d9e0f1a2b,2025-10-28,48,CO,7,Gold,11,289,camping|hiking|water-sports,in-store,9,5,4,4,,price matching
+c9a0b1c2-b3c4-4a5b-6c7d-8d9e0f1a2b3c,2025-10-30,36,WA,4,Silver,7,189,camping|hiking|apparel|footwear,desktop,8,4,4,4,,expert advice chat
+d0b1c2d3-c4d5-4b6c-7d8e-9e0f1a2b3c4d,2025-11-01,28,TX,2,Bronze,5,142,hiking|apparel,mobile,7,3,3,4,mobile experience frustrating,easy returns
+e1c2d3e4-d5e6-4c7d-8e9f-0f1a2b3c4d5e,2025-11-03,63,OR,10,Platinum,16,412,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,loyalty rewards
+f2d3e4f5-e6f7-4d8e-9f0a-1a2b3c4d5e6f,2025-11-05,38,CA,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,5,4,,trail finder
+a3e4f5a6-f7a8-4e9f-0a1b-2b3c4d5e6f7a,2025-11-07,24,UT,1,None,3,93,climbing|apparel|footwear,mobile,5,2,3,3,checkout keeps failing,price alerts
+b4f5a6b7-a8b9-4f0a-1b2c-3c4d5e6f7a8b,2025-11-09,57,MT,9,Platinum,15,389,camping|hiking|climbing,desktop,10,5,5,5,,gear comparison tool
+c5a6b7c8-b9c0-4a1b-2c3d-4d5e6f7a8b9c,2025-11-11,33,WA,3,Silver,6,162,hiking|water-sports|apparel,app,7,4,4,4,,gear reviews
+d6b7c8d9-c0d1-4b2c-3d4e-5e6f7a8b9c0d,2025-11-13,46,CO,7,Gold,11,278,camping|hiking|climbing|apparel,desktop,9,4,4,5,,in-store pickup
+e7c8d9e0-d1e2-4c3d-4e5f-6f7a8b9c0d1e,2025-11-15,21,CA,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want sustainable packaging,sustainability info
+f8d9e0f1-e2f3-4d4e-5f6a-7a8b9c0d1e2f,2025-11-17,50,UT,6,Gold,10,256,camping|climbing|water-sports,in-store,8,5,4,4,,price matching
+a9e0f1a2-f3a4-4e5f-6a7b-8b9c0d1e2f3a,2025-11-19,39,WA,5,Gold,8,213,camping|hiking|apparel|footwear,desktop,8,4,4,4,,expert advice chat
+b0f1a2b3-a4b5-4f6a-7b8c-9c0d1e2f3a4b,2025-11-21,26,OR,1,Bronze,4,123,hiking|apparel,mobile,6,3,3,4,mobile app crashes a lot,easy returns
+c1a2b3c4-b5c6-4a7b-8c9d-0d1e2f3a4b5c,2025-11-23,60,CO,9,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,9,5,5,5,,loyalty rewards
+d2b3c4d5-c6d7-4b8c-9d0e-1e2f3a4b5c6d,2025-11-25,34,CA,4,Silver,7,187,hiking|climbing|apparel|footwear,app,8,4,4,4,,trail finder
+e3c4d5e6-d7e8-4c9d-0e1f-2f3a4b5c6d7e,2025-11-27,47,WA,7,Gold,12,298,camping|hiking|water-sports,desktop,9,5,4,5,,gear comparison tool
+f4d5e6f7-e8f9-4d0e-1f2a-3a4b5c6d7e8f,2025-11-29,23,UT,0,None,3,87,hiking|apparel,mobile,5,2,3,3,more organic materials,sustainability info
+a5e6f7a8-f9a0-4e1f-2a3b-4b5c6d7e8f9a,2025-12-01,54,MT,8,Platinum,13,345,camping|hiking|climbing,in-store,9,5,4,5,,in-store pickup
+b6f7a8b9-a0b1-4f2a-3b4c-5c6d7e8f9a0b,2025-12-03,35,CO,4,Silver,7,178,camping|hiking|apparel,desktop,8,4,4,4,,price alerts
+c7a8b9c0-b1c2-4a3b-4c5d-6d7e8f9a0b1c,2025-12-05,29,CA,2,Bronze,5,134,hiking|water-sports,mobile,6,3,3,4,checkout UX could be better,gear reviews
+d8b9c0d1-c2d3-4b4c-5d6e-7e8f9a0b1c2d,2025-12-07,66,WA,10,Platinum,17,423,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+e9c0d1e2-d3e4-4c5d-6e7f-8f9a0b1c2d3e,2025-12-09,41,OR,5,Gold,9,234,camping|hiking|apparel,app,8,4,5,4,,easy returns
+f0d1e2f3-e4f5-4d6e-7f8a-9a0b1c2d3e4f,2025-12-11,25,UT,1,None,3,94,climbing|apparel|footwear,mobile,5,2,3,3,mobile payment errors,loyalty rewards
+a1e2f3a4-a6b7-4e7f-8a9b-0b1c2d3e4f5a,2025-12-13,58,CO,9,Platinum,15,398,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,trail finder
+b2f3a4b5-b7c8-4f8a-9b0c-1c2d3e4f5a6b,2025-12-15,32,WA,3,Silver,6,156,hiking|climbing|apparel,desktop,7,4,4,4,,gear comparison tool
+c3a4b5c6-c8d9-4a9b-0c1d-2d3e4f5a6b7c,2025-12-17,43,CA,6,Gold,10,267,camping|hiking|water-sports|apparel,in-store,9,5,4,4,,price matching
+d4b5c6d7-d9e0-4b0c-1d2e-3e4f5a6b7c8d,2025-12-19,20,TX,0,None,2,68,apparel|footwear,mobile,4,2,3,3,need recycled materials,sustainability info
+e5c6d7e8-e0f1-4c1d-2e3f-4f5a6b7c8d9e,2025-12-21,53,MT,8,Platinum,14,367,camping|hiking|climbing,desktop,9,5,4,5,,expert advice chat
+f6d7e8f9-f1a2-4d2e-3f4a-5a6b7c8d9e0f,2025-12-23,37,UT,4,Silver,7,189,camping|climbing|apparel|footwear,app,8,4,4,4,,gear reviews
+a7e8f9a0-a2b3-4e3f-4a5b-6b7c8d9e0f1a,2025-12-25,27,OR,1,Bronze,4,117,hiking|apparel,mobile,6,3,3,4,mobile site needs work,easy returns
+b8f9a0b1-b3c4-4f4a-5b6c-7c8d9e0f1a2b,2025-12-27,61,WA,9,Platinum,15,389,camping|hiking|water-sports,in-store,10,5,5,5,,loyalty rewards
+c9a0b1c2-c4d5-4a5b-6c7d-8d9e0f1a2b3c,2025-12-29,40,CO,5,Gold,9,234,camping|hiking|apparel|footwear,desktop,8,4,5,4,,trail finder
+d0b1c2d3-d5e6-4b6c-7d8e-9e0f1a2b3c4d,2025-12-31,30,CA,3,Silver,6,163,hiking|climbing|apparel,mobile,6,3,4,4,improve mobile filters,price alerts
+e1c2d3e4-f6a7-4c7d-8e9f-0f1a2b3c4d5e,2025-10-01,70,ID,10,Platinum,14,356,camping|hiking,in-store,10,5,5,5,,in-store experts
+f2d3e4f5-a7b8-4d8e-9f0a-1a2b3c4d5e6f,2025-10-03,36,WA,4,Silver,7,178,camping|hiking|water-sports,desktop,8,4,4,4,,gear comparison tool
+a3e4f5a6-b8c9-4e9f-0a1b-2b3c4d5e6f7a,2025-10-05,28,UT,2,Bronze,5,142,hiking|climbing|apparel|footwear,mobile,7,3,3,4,app times out often,price matching
+b4f5a6b7-c9d0-4f0a-1b2c-3c4d5e6f7a8b,2025-10-07,56,CO,9,Platinum,16,412,camping|hiking|climbing|water-sports,desktop,10,5,5,5,,expert advice chat
+c5a6b7c8-d0e1-4a1b-2c3d-4d5e6f7a8b9c,2025-10-09,42,OR,6,Gold,10,267,camping|hiking|apparel,app,9,4,5,4,,easy returns
+d6b7c8d9-e1f2-4b2c-3d4e-5e6f7a8b9c0d,2025-10-11,24,CA,1,None,3,89,hiking|apparel|footwear,mobile,5,2,3,3,mobile checkout broken,sustainability info
+e7c8d9e0-f2a3-4c3d-4e5f-6f7a8b9c0d1e,2025-10-13,49,MT,7,Gold,11,287,camping|hiking|climbing,in-store,9,5,4,4,,loyalty rewards
+f8d9e0f1-a3b4-4d4e-5f6a-7a8b9c0d1e2f,2025-10-15,33,WA,3,Silver,6,156,hiking|water-sports|apparel,desktop,7,4,4,4,,trail finder
+a9e0f1a2-b4c5-4e5f-6a7b-8b9c0d1e2f3a,2025-10-17,45,UT,7,Gold,12,298,camping|hiking|climbing|apparel,desktop,9,5,4,5,,gear reviews
+b0f1a2b3-c5d6-4f6a-7b8c-9c0d1e2f3a4b,2025-10-19,22,TX,0,None,2,74,apparel|footwear,mobile,5,2,3,3,eco certifications needed,sustainability info
+c1a2b3c4-d6e7-4a7b-8c9d-0d1e2f3a4b5c,2025-10-21,59,CO,9,Platinum,15,389,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store pickup
+d2b3c4d5-e7f8-4b8c-9d0e-1e2f3a4b5c6d,2025-10-23,38,CA,5,Gold,9,234,camping|hiking|apparel|footwear,app,8,4,5,4,,gear comparison tool
+e3c4d5e6-f8a9-4c9d-0e1f-2f3a4b5c6d7e,2025-10-25,26,OR,1,Bronze,4,118,hiking|climbing|apparel,mobile,6,2,3,4,mobile site is slow,price alerts
+f4d5e6f7-a9b0-4d0e-1f2a-3a4b5c6d7e8f,2025-10-27,51,WA,8,Platinum,14,367,camping|hiking|water-sports,desktop,9,5,4,5,,expert advice chat
+a5e6f7a8-b0c1-4e1f-2a3b-4b5c6d7e8f9a,2025-10-29,35,MT,4,Silver,7,189,camping|hiking|apparel,in-store,8,5,4,4,,easy returns
+b6f7a8b9-c1d2-4f2a-3b4c-5c6d7e8f9a0b,2025-10-31,69,ID,10,Platinum,16,401,camping|hiking|climbing,in-store,10,5,5,5,,loyalty rewards
+c7a8b9c0-d2e3-4a3b-4c5d-6d7e8f9a0b1c,2025-11-02,31,CA,3,Silver,6,162,hiking|water-sports|apparel|footwear,desktop,7,4,4,4,,trail finder
+d8b9c0d1-e3f4-4b4c-5d6e-7e8f9a0b1c2d,2025-11-04,44,CO,6,Gold,10,256,camping|hiking|climbing,desktop,9,4,4,5,,price matching
+e9c0d1e2-f4a5-4c5d-6e7f-8f9a0b1c2d3e,2025-11-06,23,UT,0,None,3,87,climbing|apparel,mobile,5,2,3,3,checkout needs improvement,sustainability info
+f0d1e2f3-a5b6-4d6e-7f8a-9a0b1c2d3e4f,2025-11-08,55,WA,8,Platinum,13,345,camping|hiking|climbing|water-sports,app,9,4,5,5,,gear reviews
+a1e2f3a4-b6c7-4e7f-8a9b-0b1c2d3e4f5a,2025-11-10,37,OR,4,Silver,7,178,hiking|apparel|footwear,desktop,8,4,4,4,,in-store pickup
+b2f3a4b5-c7d8-4f8a-9b0c-1c2d3e4f5a6b,2025-11-12,29,CA,2,Bronze,5,137,hiking|water-sports,mobile,6,3,3,4,app lags during checkout,gear comparison tool
+c3a4b5c6-d8e9-4a9b-0c1d-2d3e4f5a6b7c,2025-11-14,64,MT,10,Platinum,17,434,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,expert advice chat
+d4b5c6d7-e9f0-4b0c-1d2e-3e4f5a6b7c8d,2025-11-16,41,WA,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,4,4,,easy returns
+e5c6d7e8-f0a1-4c1d-2e3f-4f5a6b7c8d9e,2025-11-18,25,TX,1,None,3,93,hiking|apparel|footwear,mobile,5,2,3,3,better mobile experience,loyalty rewards
+f6d7e8f9-a1b2-4d2e-3f4a-5a6b7c8d9e0f,2025-11-20,58,CO,9,Platinum,15,398,camping|hiking|climbing,desktop,10,5,5,5,,trail finder
+a7e8f9a0-b2c3-4e3f-4a5b-6b7c8d9e0f1a,2025-11-22,34,UT,4,Silver,7,187,climbing|water-sports|apparel,app,8,4,4,4,,price alerts
+b8f9a0b1-c3d4-4f4a-5b6c-7c8d9e0f1a2b,2025-11-24,47,CA,7,Gold,11,278,camping|hiking|apparel|footwear,desktop,9,5,4,5,,gear reviews
+c9a0b1c2-d4e5-4a5b-6c7d-8d9e0f1a2b3c,2025-11-26,20,OR,0,None,2,68,apparel|footwear,mobile,4,2,3,3,carbon neutral options,sustainability info
+d0b1c2d3-e5f6-4b6c-7d8e-9e0f1a2b3c4d,2025-11-28,53,WA,8,Platinum,14,356,camping|hiking|climbing|water-sports,in-store,9,5,4,5,,in-store experts
+e1c2d3e4-a6b7-4c7d-8e9f-0f1a2b3c4d5e,2025-11-30,39,MT,5,Gold,8,213,camping|hiking|water-sports,app,8,4,5,4,,price matching
+f2d3e4f5-b7c8-4d8e-9f0a-1a2b3c4d5e6f,2025-12-02,27,CO,1,Bronze,4,123,hiking|apparel,mobile,6,3,3,4,app freezes frequently,gear comparison tool
+a3e4f5a6-c8d9-4e9f-0a1b-2b3c4d5e6f7a,2025-12-04,62,ID,9,Platinum,15,387,camping|hiking|climbing,in-store,10,5,5,5,,loyalty rewards
+b4f5a6b7-d9e0-4f0a-1b2c-3c4d5e6f7a8b,2025-12-06,32,CA,3,Silver,6,156,hiking|climbing|apparel|footwear,desktop,7,4,4,4,,easy returns
+c5a6b7c8-e0f1-4a1b-2c3d-4d5e6f7a8b9c,2025-12-08,46,WA,7,Gold,11,289,camping|hiking|apparel,desktop,9,4,4,5,,trail finder
+d6b7c8d9-f1a2-4b2c-3d4e-5e6f7a8b9c0d,2025-12-10,21,UT,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want repair kits,sustainability info
+e7c8d9e0-a2b3-4c3d-4e5f-6f7a8b9c0d1e,2025-12-12,56,CO,8,Platinum,13,334,camping|hiking|climbing|water-sports,app,9,4,5,5,,expert advice chat
+f8d9e0f1-b3c4-4d4e-5f6a-7a8b9c0d1e2f,2025-12-14,36,OR,4,Silver,7,189,camping|hiking|water-sports,desktop,8,4,4,4,,gear reviews
+a9e0f1a2-c4d5-4e5f-6a7b-8b9c0d1e2f3a,2025-12-16,28,CA,2,Bronze,5,142,hiking|apparel|footwear,mobile,7,3,3,4,mobile app needs update,price alerts
+b0f1a2b3-d5e6-4f6a-7b8c-9c0d1e2f3a4b,2025-12-18,67,MT,10,Platinum,17,423,camping|hiking|climbing,in-store,10,5,5,5,,in-store pickup
+c1a2b3c4-e6f7-4a7b-8c9d-0d1e2f3a4b5c,2025-12-20,42,WA,6,Gold,10,267,camping|hiking|water-sports|apparel,desktop,9,4,4,5,,loyalty rewards
+d2b3c4d5-f7a8-4b8c-9d0e-1e2f3a4b5c6d,2025-12-22,24,UT,1,None,3,86,climbing|apparel,mobile,5,2,3,3,checkout too complicated,sustainability info
+e3c4d5e6-a8b9-4c9d-0e1f-2f3a4b5c6d7e,2025-12-24,55,CO,9,Platinum,15,389,camping|hiking|climbing|water-sports,in-store,9,5,5,5,,in-store experts
+f4d5e6f7-b9c0-4d0e-1f2a-3a4b5c6d7e8f,2025-12-26,33,OR,3,Silver,6,162,hiking|apparel|footwear,app,7,4,4,4,,gear comparison tool
+a5e6f7a8-c0d1-4e1f-2a3b-4b5c6d7e8f9a,2025-12-28,48,WA,7,Gold,12,298,camping|hiking|climbing,desktop,9,5,4,4,,easy returns
+b6f7a8b9-d1e2-4f2a-3b4c-5c6d7e8f9a0b,2025-12-30,22,CA,0,None,2,74,apparel|footwear,mobile,5,2,3,3,more green products,sustainability info
+c7a8b9c0-e2f3-4a3b-4c5d-6d7e8f9a0b1c,2025-10-02,50,UT,6,Gold,10,256,camping|climbing|water-sports,desktop,8,4,4,4,,trail finder
+d8b9c0d1-f3a4-4b4c-5d6e-7e8f9a0b1c2d,2025-10-04,38,CO,5,Gold,9,234,camping|hiking|apparel,in-store,8,5,5,4,,price matching
+e9c0d1e2-a4b5-4c5d-6e7f-8f9a0b1c2d3e,2025-10-06,26,MT,1,Bronze,4,117,hiking|apparel|footwear,mobile,6,2,3,4,mobile site buggy,expert advice chat
+f0d1e2f3-b5c6-4d6e-7f8a-9a0b1c2d3e4f,2025-10-08,60,WA,9,Platinum,14,367,camping|hiking|climbing,desktop,10,5,5,5,,gear reviews
+a1e2f3a4-c6d7-4e7f-8a9b-0b1c2d3e4f5a,2025-10-10,35,OR,4,Silver,7,178,hiking|water-sports|apparel,app,8,4,4,4,,loyalty rewards
+b2f3a4b5-d7e8-4f8a-9b0c-1c2d3e4f5a6b,2025-10-12,71,ID,10,Platinum,15,387,camping|hiking,in-store,10,5,5,5,,in-store pickup
+c3a4b5c6-e8f9-4a9b-0c1d-2d3e4f5a6b7c,2025-10-14,43,CA,6,Gold,10,267,camping|hiking|climbing|apparel,desktop,9,4,4,5,,price alerts
+d4b5c6d7-f9a0-4b0c-1d2e-3e4f5a6b7c8d,2025-10-16,23,UT,0,None,3,89,hiking|apparel,mobile,5,2,3,3,need sustainable options,sustainability info
+e5c6d7e8-a0b1-4c1d-2e3f-4f5a6b7c8d9e,2025-10-18,52,WA,8,Platinum,13,345,camping|hiking|climbing|water-sports,app,9,4,5,5,,gear comparison tool
+f6d7e8f9-b1c2-4d2e-3f4a-5a6b7c8d9e0f,2025-10-20,31,CO,3,Silver,6,156,camping|hiking|apparel|footwear,desktop,7,4,4,4,,easy returns
+a7e8f9a0-c2d3-4e3f-4a5b-6b7c8d9e0f1a,2025-10-22,45,MT,7,Gold,11,278,camping|hiking|water-sports,in-store,9,5,4,4,,expert advice chat
+b8f9a0b1-d3e4-4f4a-5b6c-7c8d9e0f1a2b,2025-10-24,19,OR,0,None,2,67,apparel|footwear,mobile,4,2,3,3,eco shipping options,sustainability info
+c9a0b1c2-e4f5-4a5b-6c7d-8d9e0f1a2b3c,2025-10-26,57,CA,9,Platinum,16,412,camping|hiking|climbing,desktop,10,5,5,5,,trail finder
+d0b1c2d3-f5a6-4b6c-7d8e-9e0f1a2b3c4d,2025-10-28,37,WA,4,Silver,7,187,hiking|climbing|apparel,desktop,8,4,4,4,,loyalty rewards
+e1c2d3e4-b6c7-4c7d-8e9f-0f1a2b3c4d5e,2025-10-30,29,UT,2,Bronze,5,137,hiking|water-sports,mobile,6,3,3,4,mobile checkout issues,gear reviews
+f2d3e4f5-c7d8-4d8e-9f0a-1a2b3c4d5e6f,2025-11-01,63,CO,10,Platinum,15,389,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+a3e4f5a6-d8e9-4e9f-0a1b-2b3c4d5e6f7a,2025-11-03,40,OR,5,Gold,8,213,camping|hiking|apparel,app,8,4,5,4,,price matching
+b4f5a6b7-e9f0-4f0a-1b2c-3c4d5e6f7a8b,2025-11-05,25,CA,1,None,3,93,hiking|apparel|footwear,mobile,5,2,3,3,app crashes randomly,easy returns
+c5a6b7c8-f0a1-4a1b-2c3d-4d5e6f7a8b9c,2025-11-07,54,MT,8,Platinum,14,356,camping|hiking|climbing,desktop,9,5,4,5,,gear comparison tool
+d6b7c8d9-a1b2-4b2c-3d4e-5e6f7a8b9c0d,2025-11-09,34,WA,4,Silver,7,178,camping|hiking|water-sports|apparel,in-store,8,5,4,4,,trail finder
+e7c8d9e0-b2c3-4c3d-4e5f-6f7a8b9c0d1e,2025-11-11,27,UT,1,Bronze,4,123,climbing|apparel,mobile,6,2,3,4,mobile UX needs work,loyalty rewards
+f8d9e0f1-c3d4-4d4e-5f6a-7a8b9c0d1e2f,2025-11-13,66,CO,10,Platinum,17,423,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,expert advice chat
+a9e0f1a2-d4e5-4e5f-6a7b-8b9c0d1e2f3a,2025-11-15,39,CA,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,4,4,,price alerts
+b0f1a2b3-e5f6-4f6a-7b8c-9c0d1e2f3a4b,2025-11-17,21,OR,0,None,2,72,apparel|footwear,mobile,4,2,3,3,want zero-waste packaging,sustainability info
+c1a2b3c4-f6a7-4a7b-8c9d-0d1e2f3a4b5c,2025-11-19,51,WA,6,Gold,10,256,camping|hiking|climbing,desktop,9,4,4,5,,gear reviews
+d2b3c4d5-a7b8-4b8c-9d0e-1e2f3a4b5c6d,2025-11-21,36,MT,4,Silver,7,189,hiking|water-sports|apparel|footwear,app,8,4,4,4,,easy returns
+e3c4d5e6-b8c9-4c9d-0e1f-2f3a4b5c6d7e,2025-11-23,46,UT,7,Gold,11,287,camping|hiking|climbing|apparel,desktop,9,5,4,5,,in-store pickup
+f4d5e6f7-c9d0-4d0e-1f2a-3a4b5c6d7e8f,2025-11-25,24,TX,1,None,3,94,hiking|apparel,mobile,5,2,3,3,faster mobile site,trail finder
+a5e6f7a8-d0e1-4e1f-2a3b-4b5c6d7e8f9a,2025-11-27,59,CA,9,Platinum,15,398,camping|hiking|water-sports,in-store,10,5,5,5,,loyalty rewards
+b6f7a8b9-e1f2-4f2a-3b4c-5c6d7e8f9a0b,2025-11-29,32,CO,3,Silver,6,162,camping|hiking|apparel|footwear,desktop,7,4,4,4,,gear comparison tool
+c7a8b9c0-f2a3-4a3b-4c5d-6d7e8f9a0b1c,2025-12-01,48,WA,7,Gold,12,298,camping|hiking|climbing,app,9,4,5,5,,price matching
+d8b9c0d1-a3b4-4b4c-5d6e-7e8f9a0b1c2d,2025-12-03,22,OR,0,None,2,68,apparel|footwear,mobile,5,2,3,3,more eco brands needed,sustainability info
+e9c0d1e2-b4c5-4c5d-6e7f-8f9a0b1c2d3e,2025-12-05,56,UT,8,Platinum,14,367,camping|hiking|climbing|water-sports,desktop,9,5,4,5,,expert advice chat
+f0d1e2f3-c5d6-4d6e-7f8a-9a0b1c2d3e4f,2025-12-07,35,MT,4,Silver,7,178,camping|hiking|water-sports,in-store,8,5,4,4,,easy returns
+a1e2f3a4-d6e7-4e7f-8a9b-0b1c2d3e4f5a,2025-12-09,28,CA,2,Bronze,5,134,hiking|apparel|footwear,mobile,6,3,3,4,checkout process confusing,gear reviews
+b2f3a4b5-e7f8-4f8a-9b0c-1c2d3e4f5a6b,2025-12-11,68,CO,10,Platinum,17,434,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,in-store experts
+c3a4b5c6-f8a9-4a9b-0c1d-2d3e4f5a6b7c,2025-12-13,41,WA,5,Gold,9,234,camping|hiking|apparel,desktop,8,4,5,4,,trail finder
+d4b5c6d7-a9b0-4b0c-1d2e-3e4f5a6b7c8d,2025-12-15,26,UT,1,None,3,89,climbing|apparel|footwear,mobile,5,2,3,3,mobile site crashes,loyalty rewards
+e5c6d7e8-b0c1-4c1d-2e3f-4f5a6b7c8d9e,2025-12-17,53,OR,8,Platinum,13,345,camping|hiking|climbing,app,9,4,4,5,,gear comparison tool
+f6d7e8f9-c1d2-4d2e-3f4a-5a6b7c8d9e0f,2025-12-19,37,CA,4,Silver,7,187,hiking|water-sports|apparel|footwear,desktop,8,4,4,4,,price alerts
+a7e8f9a0-d2e3-4e3f-4a5b-6b7c8d9e0f1a,2025-12-21,30,CO,3,Silver,6,163,camping|hiking|apparel,mobile,6,3,4,4,wish mobile was smoother,easy returns
+b8f9a0b1-e3f4-4f4a-5b6c-7c8d9e0f1a2b,2025-12-23,61,WA,9,Platinum,15,389,camping|hiking|climbing|water-sports,in-store,10,5,5,5,,expert advice chat
+c9a0b1c2-f4a5-4a5b-6c7d-8d9e0f1a2b3c,2025-12-25,44,MT,6,Gold,10,267,camping|hiking|water-sports,desktop,9,4,4,5,,gear reviews
+d0b1c2d3-a5b6-4b6c-7d8e-9e0f1a2b3c4d,2025-12-27,20,TX,0,None,2,67,apparel|footwear,mobile,4,2,3,3,need sustainable shipping,sustainability info
+e1c2d3e4-c6d7-4c7d-8e9f-0f1a2b3c4d5e,2025-12-29,58,UT,9,Platinum,14,367,camping|hiking|climbing,in-store,9,5,5,5,,trail finder
+f2d3e4f5-d7e8-4d8e-9f0a-1a2b3c4d5e6f,2025-12-31,33,OR,3,Silver,6,156,hiking|climbing|apparel,desktop,7,4,4,4,,loyalty rewards

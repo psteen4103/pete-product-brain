@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoso Checkout</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    
+    <!-- Google Fonts: Serif display + sans body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-sage: #7a9b7e;
+            --color-earth: #8b7b6b;
+            --color-cream: #fefcf7;
+            --color-dark: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--color-dark);
+            background: linear-gradient(135deg, var(--color-cream) 0%, #f5f3ef 100%);
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Crimson Text', serif;
+        }
+        
+        h1 { font-size: 2.5rem; font-weight: 400; letter-spacing: -1px; }
+        h2 { font-size: 1.75rem; font-weight: 400; }
+        h3 { font-size: 1.25rem; font-weight: 500; }
+        
+        /* Section styling */
+        .checkout-section {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e5e0d8;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .checkout-section:hover {
+            border-color: var(--color-sage);
+            box-shadow: 0 8px 16px rgba(122, 155, 126, 0.08);
+        }
+        
+        .section-header {
+            background: linear-gradient(90deg, #f9f7f3 0%, #fefcf7 100%);
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e0d8;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--color-sage);
+            color: white;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-right: 0.75rem;
+        }
+        
+        /* Form elements */
+        input, select, textarea {
+            font-family: 'Outfit', sans-serif;
+            border: 1px solid #d5cfc5;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-sage);
+            box-shadow: 0 0 0 3px rgba(122, 155, 126, 0.1);
+            background: #fafaf8;
+        }
+        
+        input::placeholder {
+            color: #a8a39a;
+        }
+        
+        /* Toggle switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 56px;
+            height: 32px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #d5cfc5;
+            transition: 0.3s;
+            border-radius: 32px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: var(--color-sage);
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+        }
+        
+        /* Payment methods */
+        .payment-option {
+            border: 2px solid #d5cfc5;
+            border-radius: 10px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--color-sage);
+            background: #fafaf8;
+        }
+        
+        .payment-option.selected {
+            border-color: var(--color-sage);
+            background: linear-gradient(135deg, rgba(122, 155, 126, 0.05) 0%, rgba(122, 155, 126, 0.02) 100%);
+        }
+        
+        .payment-icon {
+            width: 48px;
+            height: 48px;
+            background: #f0ebe1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        /* Summary badge */
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid #e5e0d8;
+        }
+        
+        .summary-row:last-child {
+            border-bottom: none;
+            padding-top: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .summary-row .label {
+            color: #6b6360;
+            font-size: 0.95rem;
+        }
+        
+        /* CTA Buttons */
+        .btn-primary {
+            background: var(--color-sage);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background: #6a8b6e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(122, 155, 126, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-sage);
+            border: 1px solid var(--color-sage);
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-sage);
+            color: white;
+        }
+        
+        /* Success state */
+        .success-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--color-sage) 0%, #6a8b6e 100%);
+            border-radius: 50%;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-slide-down {
+            animation: slideDown 0.4s ease forwards;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* Staggered animations */
+        .section-body [x-show] {
+            animation: slideDown 0.4s ease forwards;
+        }
+        
+        /* Progress indicator */
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            background: #d5cfc5;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .progress-dot.active {
+            background: var(--color-sage);
+            transform: scale(1.3);
+        }
+        
+        /* Mobile-specific tweaks */
+        @media (max-width: 640px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.25rem; }
+            h3 { font-size: 1.1rem; }
+            
+            .section-header {
+                padding: 1.25rem;
+            }
+            
+            .grid-2col {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Order card styling */
+        .order-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: #fafaf8;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+        
+        .item-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #dce4d0 0%, #e8ebe0 100%);
+            border-radius: 6px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-price {
+            color: var(--color-sage);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main checkout container -->
+    <div x-data="checkoutFlow()" class="min-h-screen py-8 px-4 sm:px-8">
+        <div class="max-w-2xl mx-auto">
+            
+            <!-- Header -->
+            <div class="mb-8 sm:mb-12">
+                <h1 class="mb-2">Checkout</h1>
+                <p class="text-gray-600">Complete your order for outdoor gear</p>
+            </div>
+            
+            <!-- Shipping Section -->
+            <div class="checkout-section mb-5 animate-fade-in">
+                <div class="section-header" @click="toggleSection('shipping')">
+                    <div class="flex items-center">
+                        <span class="section-number" :class="{'bg-emerald-500': steps.shipping}">1</span>
+                        <div>
+                            <h3 class="m-0">Shipping Address</h3>
+                            <p class="text-sm text-gray-500 m-0" x-show="steps.shipping">Enter where we should send your order</p>
+                        </div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform" :class="{'rotate-180': openSections.shipping}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                
+                <div x-show="openSections.shipping" class="section-body p-6 space-y-4" style="display: none;">
+                    <!-- Guest checkout info -->
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4 mb-4">
+                        <p class="text-sm font-medium text-gray-700">✓ Checking out as guest. <button @click="alert('Account creation offered post-purchase with order tracking')" class="underline text-green-700 hover:text-green-800">Create account later</button></p>
+                    </div>
+                    
+                    <!-- Address autocomplete simulation -->
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Address</label>
+                        <div class="relative">
+                            <input type="text" placeholder="Start typing your address..." class="w-full" x-model="form.address" @focus="showAddressDropdown = true">
+                            <!-- Address suggestions mockup -->
+                            <div x-show="showAddressDropdown && form.address.length > 0" class="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 overflow-hidden" style="display: none;">
+                                <div @click="form.address = '742 Evergreen Terrace, Springfield, OR'; showAddressDropdown = false" class="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm">📍 742 Evergreen Terrace, Springfield, OR 97477</div>
+                                <div @click="form.address = '123 Mountain View Dr, Boulder, CO'; showAddressDropdown = false" class="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm border-t border-gray-100">📍 123 Mountain View Dr, Boulder, CO 80301</div>
+                                <div @click="form.address = '456 Lakeside Ave, Seattle, WA'; showAddressDropdown = false" class="px-4 py-3 hover:bg-gray-50 cursor-pointer text-sm border-t border-gray-100">📍 456 Lakeside Ave, Seattle, WA 98101</div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Powered by address lookup</p>
+                    </div>
+                    
+                    <!-- Address fields grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 grid-2col">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">City</label>
+                            <input type="text" placeholder="City" x-model="form.city">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">State</label>
+                            <input type="text" placeholder="State" x-model="form.state">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Postal Code</label>
+                            <input type="text" placeholder="Postal Code" x-model="form.postalCode">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Country</label>
+                            <select x-model="form.country">
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>Mexico</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact info -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 grid-2col">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" placeholder="your@email.com" x-model="form.email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone</label>
+                            <input type="tel" placeholder="(555) 000-0000" x-model="form.phone">
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary mt-6" @click="steps.shipping = true; openSections.shipping = false; openSections.billing = true">Continue to Billing</button>
+                </div>
+            </div>
+            
+            <!-- Billing Section -->
+            <div class="checkout-section mb-5 animate-fade-in" style="animation-delay: 0.1s;">
+                <div class="section-header" @click="toggleSection('billing')" :class="{'opacity-50 pointer-events-none': !steps.shipping}">
+                    <div class="flex items-center">
+                        <span class="section-number" :class="{'bg-emerald-500': steps.billing}">2</span>
+                        <div>
+                            <h3 class="m-0">Billing Address</h3>
+                            <p class="text-sm text-gray-500 m-0" x-show="steps.billing">{{ form.sameAsBilling ? 'Same as shipping' : 'Enter billing address' }}</p>
+                        </div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform" :class="{'rotate-180': openSections.billing}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                
+                <div x-show="openSections.billing && steps.shipping" class="section-body p-6 space-y-4" style="display: none;">
+                    <!-- Same as shipping toggle -->
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <label class="text-sm font-medium cursor-pointer">Same as shipping address</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" x-model="form.sameAsBilling">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <!-- Billing form (shown only if not same as shipping) -->
+                    <div x-show="!form.sameAsBilling" style="display: none;" class="space-y-4">
+                        <input type="text" placeholder="Billing address" class="w-full" x-model="form.billingAddress">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 grid-2col">
+                            <input type="text" placeholder="City" x-model="form.billingCity">
+                            <input type="text" placeholder="State" x-model="form.billingState">
+                            <input type="text" placeholder="Postal Code" x-model="form.billingPostal">
+                            <select x-model="form.billingCountry">
+                                <option>United States</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary mt-6" @click="steps.billing = true; openSections.billing = false; openSections.payment = true">Continue to Payment</button>
+                </div>
+            </div>
+            
+            <!-- Payment Section -->
+            <div class="checkout-section mb-5 animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="section-header" @click="toggleSection('payment')" :class="{'opacity-50 pointer-events-none': !steps.billing}">
+                    <div class="flex items-center">
+                        <span class="section-number" :class="{'bg-emerald-500': steps.payment}">3</span>
+                        <div>
+                            <h3 class="m-0">Payment Method</h3>
+                            <p class="text-sm text-gray-500 m-0" x-show="steps.payment">{{ form.paymentMethod || 'Select a payment method' }}</p>
+                        </div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform" :class="{'rotate-180': openSections.payment}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                
+                <div x-show="openSections.payment && steps.billing" class="section-body p-6 space-y-4" style="display: none;">
+                    <p class="text-sm text-gray-600 mb-4">Choose your preferred payment method</p>
+                    
+                    <!-- Express payment options -->
+                    <div class="space-y-3">
+                        <!-- Apple Pay -->
+                        <div class="payment-option" :class="{'selected': form.paymentMethod === 'Apple Pay'}" @click="form.paymentMethod = 'Apple Pay'">
+                            <div class="payment-icon">🍎</div>
+                            <div>
+                                <p class="font-medium m-0">Apple Pay</p>
+                                <p class="text-xs text-gray-500 m-0">Fast & secure</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Google Pay -->
+                        <div class="payment-option" :class="{'selected': form.paymentMethod === 'Google Pay'}" @click="form.paymentMethod = 'Google Pay'">
+                            <div class="payment-icon">🔵</div>
+                            <div>
+                                <p class="font-medium m-0">Google Pay</p>
+                                <p class="text-xs text-gray-500 m-0">Stored payment method</p>
+                            </div>
+                        </div>
+                        
+                        <!-- PayPal -->
+                        <div class="payment-option" :class="{'selected': form.paymentMethod === 'PayPal'}" @click="form.paymentMethod = 'PayPal'">
+                            <div class="payment-icon">P</div>
+                            <div>
+                                <p class="font-medium m-0">PayPal</p>
+                                <p class="text-xs text-gray-500 m-0">Buyer protection included</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card option (fallback) -->
+                    <div class="pt-4 border-t border-gray-200">
+                        <button class="btn-secondary w-full" @click="showCardForm = !showCardForm">
+                            <span x-show="!showCardForm">+ Credit or Debit Card</span>
+                            <span x-show="showCardForm">Hide Card Form</span>
+                        </button>
+                        
+                        <div x-show="showCardForm" class="mt-4 space-y-4" style="display: none;">
+                            <input type="text" placeholder="Cardholder Name" class="w-full">
+                            <input type="text" placeholder="Card Number" class="w-full">
+                            <div class="grid grid-cols-2 gap-4">
+                                <input type="text" placeholder="MM/YY">
+                                <input type="text" placeholder="CVV">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary mt-6" @click="steps.payment = true; openSections.payment = false; openSections.review = true" :disabled="!form.paymentMethod">Review Order</button>
+                </div>
+            </div>
+            
+            <!-- Review Section -->
+            <div class="checkout-section mb-8 animate-fade-in" style="animation-delay: 0.3s;">
+                <div class="section-header" @click="toggleSection('review')" :class="{'opacity-50 pointer-events-none': !steps.payment}">
+                    <div class="flex items-center">
+                        <span class="section-number" :class="{'bg-emerald-500': steps.review}">4</span>
+                        <div>
+                            <h3 class="m-0">Review Order</h3>
+                            <p class="text-sm text-gray-500 m-0" x-show="steps.review">Everything looks good?</p>
+                        </div>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 transition-transform" :class="{'rotate-180': openSections.review}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                
+                <div x-show="openSections.review && steps.payment" class="section-body p-6 space-y-6" style="display: none;">
+                    <!-- Order summary -->
+                    <div>
+                        <h4 class="font-semibold mb-4 text-sm text-gray-700">Your Order</h4>
+                        
+                        <div class="order-item">
+                            <div class="item-image">⛺</div>
+                            <div class="item-details">
+                                <p class="font-medium m-0">Lightweight 3-Season Tent</p>
+                                <p class="text-xs text-gray-500 m-0">Qty: 1 • Eco-Certified</p>
+                                <p class="item-price mt-2">$249.99</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="item-image">🎒</div>
+                            <div class="item-details">
+                                <p class="font-medium m-0">Trail Backpack 60L</p>
+                                <p class="text-xs text-gray-500 m-0">Qty: 1</p>
+                                <p class="item-price mt-2">$189.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing breakdown -->
+                    <div class="bg-gray-50 rounded-lg p-4 space-y-3">
+                        <div class="summary-row">
+                            <span class="label">Subtotal</span>
+                            <span>$439.98</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">Shipping</span>
+                            <span>$12.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">Tax</span>
+                            <span>$36.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">🌱 Carbon Offset (Free)</span>
+                            <span class="text-green-600">-$5.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Total</span>
+                            <span class="text-xl">$482.98</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Summary details -->
+                    <div class="space-y-3 text-sm">
+                        <div class="pb-3 border-b border-gray-200">
+                            <p class="font-medium mb-1">Shipping to:</p>
+                            <p class="text-gray-600">{{ form.address || 'Your address' }}, {{ form.city }}, {{ form.state }}</p>
+                        </div>
+                        <div class="pb-3 border-b border-gray-200">
+                            <p class="font-medium mb-1">Payment Method:</p>
+                            <p class="text-gray-600">{{ form.paymentMethod }}</p>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">Contact:</p>
+                            <p class="text-gray-600">{{ form.email }}</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Place order button -->
+                    <button class="btn-primary mt-6" @click="placeOrder()">Place Order</button>
+                    
+                    <p class="text-xs text-gray-500 text-center">
+                        By placing your order, you agree to our <button class="underline text-gray-700 hover:text-gray-900">Terms of Service</button>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Success State (shown after order placed) -->
+            <div x-show="orderPlaced" class="checkout-section p-12 text-center" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h2 class="mb-2">Order Confirmed!</h2>
+                <p class="text-gray-600 mb-6">Order #{{  orderNumber }} shipped to {{ form.address }}</p>
+                <p class="text-sm text-gray-500 mb-8">We've sent a confirmation email to <strong>{{ form.email }}</strong></p>
+                <div class="space-y-2">
+                    <button class="btn-primary" @click="resetCheckout()">Start New Order</button>
+                    <button class="btn-secondary w-full" @click="alert('Offer account creation with order tracking')">Create Account for Order Tracking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+        // Checkout flow controller
+        function checkoutFlow() {
+            return {
+                // Form data
+                form: {
+                    address: '',
+                    city: '',
+                    state: '',
+                    postalCode: '',
+                    country: 'United States',
+                    email: '',
+                    phone: '',
+                    billingAddress: '',
+                    billingCity: '',
+                    billingState: '',
+                    billingPostal: '',
+                    billingCountry: 'United States',
+                    sameAsBilling: true,
+                    paymentMethod: '',
+                },
+                
+                // UI state
+                openSections: {
+                    shipping: true,
+                    billing: false,
+                    payment: false,
+                    review: false,
+                },
+                
+                // Progress tracking
+                steps: {
+                    shipping: false,
+                    billing: false,
+                    payment: false,
+                    review: false,
+                },
+                
+                // UI flags
+                showAddressDropdown: false,
+                showCardForm: false,
+                orderPlaced: false,
+                orderNumber: Math.floor(100000 + Math.random() * 900000),
+                
+                // Toggle section open/close
+                toggleSection(section) {
+                    // Prevent opening sections before dependencies
+                    if (section === 'billing' && !this.steps.shipping) return;
+                    if (section === 'payment' && !this.steps.billing) return;
+                    if (section === 'review' && !this.steps.payment) return;
+                    
+                    this.openSections[section] = !this.openSections[section];
+                },
+                
+                // Place order
+                placeOrder() {
+                    // Simulate order processing
+                    this.orderPlaced = true;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                },
+                
+                // Reset to initial state
+                resetCheckout() {
+                    this.form = {
+                        address: '',
+                        city: '',
+                        state: '',
+                        postalCode: '',
+                        country: 'United States',
+                        email: '',
+                        phone: '',
+                        billingAddress: '',
+                        billingCity: '',
+                        billingState: '',
+                        billingPostal: '',
+                        billingCountry: 'United States',
+                        sameAsBilling: true,
+                        paymentMethod: '',
+                    };
+                    
+                    this.openSections = {
+                        shipping: true,
+                        billing: false,
+                        payment: false,
+                        review: false,
+                    };
+                    
+                    this.steps = {
+                        shipping: false,
+                        billing: false,
+                        payment: false,
+                        review: false,
+                    };
+                    
+                    this.orderPlaced = false;
+                    this.orderNumber = Math.floor(100000 + Math.random() * 900000);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

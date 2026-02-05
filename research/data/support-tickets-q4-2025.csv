@@ -1,0 +1,71 @@
+ticket_id,date,channel,category,customer_verbatim,resolved,agent_notes
+TKT-4521,2025-10-03,chat,checkout,"I'm trying to buy a tent for my brother's birthday but I can't figure out how to ship it to his address instead of mine. Had to abandon my cart.",true,Walked through address change - UI not intuitive
+TKT-4522,2025-10-03,email,returns,"Returning the Osprey pack. Size chart said Large but it's way too big. I'm 5'10 and followed the torso measurement guide exactly. Frustrating.",true,Processed return - sizing feedback logged
+TKT-4523,2025-10-04,phone,shipping,"Where's my order? Tracking hasn't updated in 3 days. I need this for a trip next weekend!",true,Carrier delay - expedited replacement
+TKT-4524,2025-10-05,chat,product,"Does the MSR Hubba Hubba NX work with my old MSR footprint from 2019? Can't find compatibility info anywhere on the site.",false,Unable to confirm - suggested email MSR directly
+TKT-4525,2025-10-05,email,checkout,"Wanted to buy sleeping bags for my whole scout troop (8 bags) but your site kept timing out when I tried to add that many. Had to do 8 separate transactions.",true,Known issue with bulk adds - workaround provided
+TKT-4526,2025-10-06,chat,loyalty,"I had 2,400 trail points and now I only have 800? What happened to them? Nobody told me they expire!",true,Explained 12-month expiration policy - customer upset
+TKT-4527,2025-10-07,email,product,"Looking for a complete beginner camping setup for 2 people. Budget around $500. Your site has thousands of products but no way to just buy 'what I need to go camping.' Super overwhelming.",true,Built custom recommendation via email
+TKT-4528,2025-10-08,phone,returns,"Third time returning boots this year. I keep ordering between sizes and guessing wrong. Do you have any way to help me figure out the right size before I order?",true,Suggested in-store fitting - customer hours away from store
+TKT-4529,2025-10-08,chat,checkout,"Trying to send a gift but the invoice shows the price. Can I get a gift receipt or something that hides what I paid? This is for my wife.",false,No gift receipt option currently - apologized
+TKT-4530,2025-10-09,email,mobile,"Your app keeps crashing when I try to look at product photos. iPhone 13. Super annoying when I'm in the store comparing prices.",true,Known iOS bug - update pending
+TKT-4531,2025-10-10,chat,search,"Searched 'waterproof jacket for pacific northwest rain' and got 400+ results. I just want THE jacket people actually use for PNW hiking. Too many choices.",true,Provided personal recommendation
+TKT-4532,2025-10-11,phone,checkout,"The Apple Pay button didn't work. Just spun forever. Had to dig out my credit card which I didn't have handy.",true,Intermittent Apple Pay issue - escalated to eng
+TKT-4533,2025-10-11,email,product,"Bought the REI Kingdom tent. Do I need a separate footprint? The product page doesn't say if it comes with one or not.",true,Clarified no footprint included
+TKT-4534,2025-10-12,chat,loyalty,"How close am I to the next tier? I can't find anywhere that shows my progress. Just see I'm 'Basecamp' level.",true,Showed how to find tier progress - buried in account settings
+TKT-4535,2025-10-13,email,returns,"The Patagonia jacket I got has different colors than the photos. It's more purple than blue. Returning.",true,Processed return - color accuracy feedback
+TKT-4536,2025-10-14,chat,checkout,"Checkout took FOREVER on my phone. Like 5 screens? Just let me pay already. Cart had $220 worth of stuff and I gave up.",false,Mobile checkout friction - lost sale
+TKT-4537,2025-10-15,phone,product,"I want to get my dad into backpacking but he's 67 with a bad knee. Is there like a 'senior beginner' kit or something? Lightweight and easy on joints?",true,Custom recommendations provided - great feedback
+TKT-4538,2025-10-16,email,shipping,"You shipped my items in 3 separate boxes when they could have fit in one. That's wasteful. I thought you were a sustainable company?",true,Logged packaging feedback - warehouse issue
+TKT-4539,2025-10-17,chat,search,"Your search doesn't understand 'tent for tall person.' I'm 6'5 and bought a tent that said 'sleeps 2' but I don't fit. Had to return it.",true,Processed return - search refinement feedback
+TKT-4540,2025-10-18,phone,loyalty,"I spent $800 last month but my points haven't updated. Been 3 weeks.",true,Integration delay - manually adjusted points
+TKT-4541,2025-10-19,email,checkout,"Why can't I save my cart and come back later? It disappeared after a few hours and I lost everything I'd picked out.",true,Explained guest cart expiration - suggested account signup
+TKT-4542,2025-10-20,chat,product,"Need a camp stove that works with my Jetboil fuel canisters. Couldn't figure out which ones are compatible from your site.",false,Compatibility info not available - sent brand links
+TKT-4543,2025-10-21,phone,returns,"Wanted to exchange for a different size but your return process made me return first, then reorder. What if the new size sells out while I wait?",true,Exchange flow frustration - valid concern
+TKT-4544,2025-10-22,email,sustainability,"Bought the 'eco-friendly' tent but the packaging had SO much plastic. What exactly is eco-friendly about this?",true,Explained product certification vs packaging
+TKT-4545,2025-10-22,chat,checkout,"I'm buying holiday gifts for my whole family. Can I split my order to ship to 4 different addresses without doing 4 orders?",false,Not currently supported - lost high-value order
+TKT-4546,2025-10-23,email,product,"First time winter camping. What do I actually NEED? Site showed me 2000 products. I just need the essentials for one night.",true,Built starter list via email - very engaged
+TKT-4547,2025-10-24,phone,mobile,"Tried to use the camera scan thing to find a product I saw at a trailhead. Feature never loaded.",true,AR feature bug - device compatibility issue
+TKT-4548,2025-10-25,chat,loyalty,"What are trail points even worth? I have 1500 but can't figure out how to use them or what they get me.",true,Explained redemption - UI needs improvement
+TKT-4549,2025-10-26,email,returns,"These hiking poles are marked 'used' quality but they have scratches not shown in photos. Feel deceived.",true,Full refund + discount code - QC feedback
+TKT-4550,2025-10-27,phone,search,"Trying to find gear that works together. Like a backpack that fits a specific tent and sleeping bag. No way to search for compatible bundles.",true,Manual research provided - feature request logged
+TKT-4551,2025-10-28,chat,checkout,"Payment failed 3 times even though my card is fine. Used it at another site immediately. Your checkout is broken.",true,Payment processor issue - resolved same day
+TKT-4552,2025-10-29,email,product,"Bought the 'complete hiking kit' but it didn't include trekking poles. How is that complete? Misleading.",true,Bundle feedback - poles should be included
+TKT-4553,2025-10-30,phone,sustainability,"Do you have any way to see the carbon footprint of products? I want to make better choices but there's no info.",true,Feature request for product carbon info
+TKT-4554,2025-10-31,chat,returns,"Size chart for gloves was totally wrong. My hand is exactly 8 inches and Medium was way too small.",true,Returns processed - sizing chart flagged
+TKT-4555,2025-11-02,email,checkout,"Why do I need to create an account to check out? I just want to buy one thing and never come back to this site.",true,Explained guest checkout exists - hard to find
+TKT-4556,2025-11-03,phone,product,"My sleeping bag says rated to 20°F but I was FREEZING at 35°F. These ratings are BS.",true,Explained EN ratings vs comfort - documentation issue
+TKT-4557,2025-11-04,chat,loyalty,"Tried to redeem points for a reward but it said 'not available in your tier.' What rewards CAN I actually get?",true,Tier confusion - clearer communication needed
+TKT-4558,2025-11-05,email,mobile,"App reset my password for no reason. Happened twice this month. Very annoying.",true,Security feature - better communication needed
+TKT-4559,2025-11-06,chat,search,"Why can't I filter by 'Made in USA'? I only want American-made gear.",false,Filter not available - feature request
+TKT-4560,2025-11-07,phone,checkout,"Wanted to add a gift message with my order. No option for that. It's the holidays!!",false,Gift message not supported - holiday season concern
+TKT-4561,2025-11-08,email,returns,"Return label didn't work. Post office said it was invalid. Wasted a trip.",true,Label regenerated - carrier integration bug
+TKT-4562,2025-11-09,chat,product,"What's the difference between all your puffy jackets? There's like 50 options and they all look the same.",true,Comparison guide sent - discovery problem
+TKT-4563,2025-11-10,phone,sustainability,"I picked eco-shipping but my package came in 2 days. That's not eco. Fast shipping = planes.",true,Explained consolidated shipping routes
+TKT-4564,2025-11-11,chat,checkout,"Coupon code didn't work. Tried 5 different ones I found online. All expired apparently.",true,Offered valid discount - coupon management issue
+TKT-4565,2025-11-12,email,product,"Getting back into backpacking after 15 years. Gear has changed so much. Wish there was a 'start over' guide for returning hikers.",true,Personalized guide sent - great segment to target
+TKT-4566,2025-11-13,phone,loyalty,"I returned an item but didn't get my points back. That's not fair - I didn't keep the product.",true,Manual points adjustment - policy clarification
+TKT-4567,2025-11-14,chat,mobile,"Photos take forever to load on the app. I have good wifi. It's your app.",true,Image optimization issue - known problem
+TKT-4568,2025-11-15,email,search,"Searched for 'glamping tent' and got regular backpacking tents. Very different thing.",true,Search refinement feedback - intent mismatch
+TKT-4569,2025-11-16,chat,checkout,"Why isn't PayPal an option? Every other outdoor retailer takes PayPal.",false,PayPal not currently integrated - frequent request
+TKT-4570,2025-11-17,phone,returns,"Your return window is only 30 days but I bought this as a Christmas gift in November. Won't know if it fits until January!",true,Holiday extension applied - seasonal policy issue
+TKT-4571,2025-11-18,email,product,"Buying for a group campout - 6 tents, stoves, coolers. Took me 4 hours to put together. Wish you had group/bulk ordering.",true,Assisted with bulk order - feature gap
+TKT-4572,2025-11-19,chat,sustainability,"What does 'sustainably sourced' actually mean for your products? Seems vague.",true,Explained certification standards
+TKT-4573,2025-11-20,phone,loyalty,"My friend referred me but neither of us got the referral bonus. Been 2 months.",true,Manual referral credit - tracking bug
+TKT-4574,2025-11-21,email,checkout,"International shipping costs more than the product. $45 to ship a $30 item to Canada. I'll buy elsewhere.",false,Lost international customer - shipping cost
+TKT-4575,2025-11-22,chat,product,"Will this hydration bladder fit in my Deuter backpack? No compatibility info anywhere. Had to guess.",true,Confirmed compatibility manually - info gap
+TKT-4576,2025-11-23,phone,search,"Tried searching 'gifts for hiker under $50' and got 900 results. No help at all.",true,Sent curated guide - gift search is broken
+TKT-4577,2025-11-24,email,returns,"Product arrived damaged. Return process wants ME to pay for shipping? That's ridiculous for a defective item.",true,Prepaid label issued - policy confusion
+TKT-4578,2025-11-25,chat,mobile,"Can't use the app without allowing location. I don't want to share my location just to browse products.",true,App permission issue - should be optional
+TKT-4579,2025-11-26,phone,checkout,"Black Friday and your site crashed. Lost my cart twice. Went to REI instead.",false,Site capacity issue - lost customer
+TKT-4580,2025-12-01,email,product,"New to hammock camping. What else do I need with the hammock? Straps? Tarp? Underquilt? Site doesn't explain the system.",true,Full hammock guide sent - onboarding gap
+TKT-4581,2025-12-02,chat,loyalty,"Do my points work at your physical stores too? Nothing explains this.",true,Clarified omnichannel redemption
+TKT-4582,2025-12-03,phone,returns,"Trade-in program page says 'coming soon' but it's been saying that for 6 months.",true,No update on trade-in timeline - customer frustrated
+TKT-4583,2025-12-04,email,checkout,"Buying gifts. Can you NOT include the packing slip with prices? Or add gift wrapping? Basic stuff.",false,Gift features not available
+TKT-4584,2025-12-05,chat,search,"I search for 'crampons' and also get 'ice axes' - I know what I want! Just show me crampons.",true,Search over-broadening feedback
+TKT-4585,2025-12-06,phone,product,"The tent I bought doesn't fit in the carry bag that came with it. Seriously?",true,Known issue with that SKU - replacement bag sent
+TKT-4586,2025-12-08,email,sustainability,"Wanted to see how my purchases impact the environment. Like a dashboard or something. Do you track that?",true,Feature request for customer impact dashboard
+TKT-4587,2025-12-09,chat,mobile,"Tried to reorder my favorite socks. Couldn't find my order history easily. Gave up.",true,Order history UX issue - deep in menu
+TKT-4588,2025-12-10,phone,checkout,"Express checkout option would be amazing. I buy from you guys all the time, shouldn't need to enter info every time.",true,Valid request - no saved payment feature in checkout
+TKT-4589,2025-12-11,email,loyalty,"How do I earn points faster? Want to hit Summit tier before my big trip in spring.",true,Explained accelerators - engagement opportunity
+TKT-4590,2025-12-12,chat,product,"Need a tent that packs small for bike touring. Searched 'bikepacking tent' - nothing. 'Compact tent' gave me 200 options.",true,Personalized recommendations sent - niche use case
